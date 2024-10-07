@@ -10,9 +10,10 @@ const initialState = {
 export const registerUser = createAsyncThunk(
   "/auth/register",
 
+  //http://localhost:5000/api/auth/register
   async (formData) => {
     const response = await axios.post(
-      "http://localhost:5000/api/auth/register",
+      "/api/auth/register",
       formData,
       {
         withCredentials: true,
@@ -26,6 +27,7 @@ export const registerUser = createAsyncThunk(
 export const loginUser = createAsyncThunk(
   "/auth/login",
 
+  //http://localhost:5000/api/auth/login
   async (formData) => {
     const response = await axios.post(
       "/api/auth/login",
@@ -42,9 +44,10 @@ export const loginUser = createAsyncThunk(
 export const logoutUser = createAsyncThunk(
   "/auth/logout",
 
+  //http://localhost:5000/api/auth/logout
   async () => {
     const response = await axios.post(
-      "http://localhost:5000/api/auth/logout",
+      "/api/auth/logout",
       {},
       {
         withCredentials: true,
@@ -58,9 +61,10 @@ export const logoutUser = createAsyncThunk(
 export const checkAuth = createAsyncThunk(
   "/auth/checkauth",
 
+  //http://localhost:5000/api/auth/check-auth
   async () => {
     const response = await axios.get(
-      "http://localhost:5000/api/auth/check-auth",
+      "/api/auth/check-auth",
       {
         withCredentials: true,
         headers: {
