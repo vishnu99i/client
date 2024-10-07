@@ -6,22 +6,24 @@ const initialState = {
   featureImageList: [],
 };
 
+//http://localhost:5000/api/common/feature/get
 export const getFeatureImages = createAsyncThunk(
   "/order/getFeatureImages",
   async () => {
     const response = await axios.get(
-      `http://localhost:5000/api/common/feature/get`
+      `/api/common/feature/get`
     );
 
     return response.data;
   }
 );
 
+//http://localhost:5000/api/common/feature/add
 export const addFeatureImage = createAsyncThunk(
   "/order/addFeatureImage",
   async (image) => {
     const response = await axios.post(
-      `http://localhost:5000/api/common/feature/add`,
+      `/api/common/feature/add`,
       { image }
     );
 
