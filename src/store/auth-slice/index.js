@@ -30,7 +30,7 @@ export const loginUser = createAsyncThunk(
   //http://localhost:5000/api/auth/login
   async (formData) => {
     const response = await axios.post(
-      "https://server-app-six.vercel.app/api/auth/login",
+      "/api/auth/login",
       formData,
       {
         withCredentials: true,

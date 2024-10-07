@@ -9,8 +9,9 @@ const initialState = {
 export const getAllOrdersForAdmin = createAsyncThunk(
   "/order/getAllOrdersForAdmin",
   async () => {
+    //http://localhost:5000/api/admin/orders/get
     const response = await axios.get(
-      `http://localhost:5000/api/admin/orders/get`
+      `/api/admin/orders/get`
     );
 
     return response.data;
@@ -20,8 +21,9 @@ export const getAllOrdersForAdmin = createAsyncThunk(
 export const getOrderDetailsForAdmin = createAsyncThunk(
   "/order/getOrderDetailsForAdmin",
   async (id) => {
+    //http://localhost:5000/api/admin/orders/details/${id}
     const response = await axios.get(
-      `http://localhost:5000/api/admin/orders/details/${id}`
+      `/api/admin/orders/details/${id}`
     );
 
     return response.data;
@@ -31,8 +33,9 @@ export const getOrderDetailsForAdmin = createAsyncThunk(
 export const updateOrderStatus = createAsyncThunk(
   "/order/updateOrderStatus",
   async ({ id, orderStatus }) => {
+    //http://localhost:5000/api/admin/orders/update/${id}
     const response = await axios.put(
-      `http://localhost:5000/api/admin/orders/update/${id}`,
+      `/api/admin/orders/update/${id}`,
       {
         orderStatus,
       }
