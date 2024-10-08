@@ -13,7 +13,7 @@ export const registerUser = createAsyncThunk(
   //http://localhost:5000/api/auth/register
   async (formData) => {
     const response = await axios.post(
-      "/api/auth/register",
+      "https://server-app-six.vercel.app/api/auth/register",
       formData,
       {
         withCredentials: true,
@@ -30,7 +30,7 @@ export const loginUser = createAsyncThunk(
   //http://localhost:5000/api/auth/login
   async (formData) => {
     const response = await axios.post(
-      "/api/auth/login",
+      "https://server-app-six.vercel.app/api/auth/login",
       formData,
       {
         withCredentials: true,
@@ -46,7 +46,7 @@ export const logoutUser = createAsyncThunk(
   //http://localhost:5000/api/auth/logout
   async () => {
     const response = await axios.post(
-      "/api/auth/logout",
+      "https://server-app-six.vercel.app/api/auth/logout",
       {},
       {
         withCredentials: true,
@@ -63,7 +63,7 @@ export const checkAuth = createAsyncThunk(
   //http://localhost:5000/api/auth/check-auth
   async () => {
     const response = await axios.get(
-      "/api/auth/check-auth",
+      "https://server-app-six.vercel.app/api/auth/check-auth",
       {
         withCredentials: true,
         headers: {
