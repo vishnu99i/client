@@ -36,7 +36,7 @@ export const loginUser = createAsyncThunk(
         withCredentials: true,
       }
     );
-
+console.log("Hai")
     return response.data;
   }
 );
