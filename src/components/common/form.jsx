@@ -30,6 +30,7 @@ function CommonForm({
             placeholder={getControlItem.placeholder}
             id={getControlItem.name}
             type={getControlItem.type}
+            className="text-black"
             value={value}
             onChange={(event) =>
               setFormData({
