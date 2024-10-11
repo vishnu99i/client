@@ -10,7 +10,7 @@ function AuthLayout() {
           </h1>
         </div>
       </div>
-      <div className="flex flex-1 items-center justify-center bg-background bg-[url('../src/assets/login.jpg')] md:bg-gradient-to-r md:from-black md:to-slate-900 text-white px-4 py-12 sm:px-6 lg:px-8">
+      <div className="flex flex-1 items-center justify-center bg-background bg-[url('../src/assets/login.jpg')] md:bg-gradient-to-r md:from-black md:to-slate-900 text-slate-300 px-4 py-12 sm:px-6 lg:px-8">
         <Outlet />
       </div>
     </div>
