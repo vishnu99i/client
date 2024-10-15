@@ -45,6 +45,7 @@ export const loginUser = createAsyncThunk(
       }
     );
     console.log("jwt data",response.data)
+    console.log("jwt token",response.data.token)
     return response.data;
   }
 );
