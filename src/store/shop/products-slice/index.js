@@ -17,8 +17,9 @@ export const fetchAllFilteredProducts = createAsyncThunk(
       sortBy: sortParams,
     });
 
+    const token = localStorage.getItem('token');
     const result = await axios.get(
-      `https://server-app-six.vercel.app/api/shop/products/get?${query}`
+      `https://server-app-six.vercel.app/api/shop/products/get?${query}`,{headers:{Authorization: `Bearer ${token}`}}
     );
 
     console.log(result);
@@ -30,8 +31,9 @@ export const fetchAllFilteredProducts = createAsyncThunk(
 export const fetchProductDetails = createAsyncThunk(
   "/products/fetchProductDetails",
   async (id) => {
+    const token = localStorage.getItem('token');
     const result = await axios.get(
-      `https://server-app-six.vercel.app/api/shop/products/get/${id}`
+      `https://server-app-six.vercel.app/api/shop/products/get/${id}`,{headers:{Authorization: `Bearer ${token}`}}
     );
 
     return result?.data;
