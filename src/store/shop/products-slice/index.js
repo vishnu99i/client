@@ -21,7 +21,11 @@ export const fetchAllFilteredProducts = createAsyncThunk(
     const token = localStorage.getItem('token');
     console.log("token1",token)
     const result = await axios.get(
-      `https://server-app-six.vercel.app/api/shop/products/get?${query}`,{headers:{Authorization: `Bearer ${token}`}}
+      `https://server-app-six.vercel.app/api/shop/products/get?${query}`,{
+        headers:{
+          Authorization: `Bearer ${token}`
+        }
+      }
     );
 
     console.log(result);
@@ -36,7 +40,11 @@ export const fetchProductDetails = createAsyncThunk(
     const token = localStorage.getItem('token');
     console.log("token2",token)
     const result = await axios.get(
-      `https://server-app-six.vercel.app/api/shop/products/get/${id}`,{headers:{Authorization: `Bearer ${token}`}}
+      `https://server-app-six.vercel.app/api/shop/products/get/${id}`,{
+        headers:{
+          Authorization: `Bearer ${token}`
+        }
+      }
     );
 
     return result?.data;
