@@ -7,6 +7,8 @@ const initialState = {
   user: null,
 };
 
+const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9eyJpZCI6IjY2ZGFjNzdlYzI0ZWVlNjBmMmY5ZTFjYyIsInJvbGUiOiJ1c2VyIiwiZW1haWwiOiJ0d29AZ21haWwuY29tIiwidXNlck5hbWUiOiJ0d28iLCJpYXQiOjE3MjkwMTY4NDEsImV4cCI6MTcyOTAyMDQ0MX0.Aq_wiM8FfqhZDk4aFjPru9Fil1_dUkLgpejhTymqdjY"
+
 export const registerUser = createAsyncThunk(
   "/auth/register",
 
@@ -16,6 +18,9 @@ export const registerUser = createAsyncThunk(
       "https://server-app-six.vercel.app/api/auth/register",
       formData,
       {
+        headers: {
+          Authorization: `Bearer ${token}`, // Add the Bearer token here
+        },
         withCredentials: true,
       }
     );
@@ -33,6 +38,9 @@ export const loginUser = createAsyncThunk(
       "https://server-app-six.vercel.app/api/auth/login",
       formData,
       {
+        headers: {
+          Authorization: `Bearer ${token}`, // Add the Bearer token here
+        },
         withCredentials: true,
       }
     );
