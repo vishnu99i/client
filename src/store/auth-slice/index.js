@@ -16,9 +16,6 @@ export const registerUser = createAsyncThunk(
       "https://server-app-six.vercel.app/api/auth/register",
       formData,
       {
-        headers: {
-          Authorization: `Bearer ${token}`, // Add the Bearer token here
-        },
         withCredentials: true,
       }
     );
@@ -36,14 +33,12 @@ export const loginUser = createAsyncThunk(
       "https://server-app-six.vercel.app/api/auth/login",
       formData,
       {
-        headers: {
-          Authorization: `Bearer ${response.data.token}`, // Add the Bearer token here
-        },
         withCredentials: true,
       }
     );
     console.log("jwt data",response.data)
     console.log("jwt token",response.data.token)
+    localStorage.setItem('token', response.data.token);
     return response.data;
   }
 );
