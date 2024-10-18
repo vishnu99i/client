@@ -32,6 +32,7 @@ export const fetchAllProducts = createAsyncThunk(
       "/api/admin/products/get"
     );
 
+    console.log("Fetch all products",result);
     return result?.data;
   }
 );
