@@ -101,6 +101,7 @@ function AdminProducts() {
   }, [dispatch]);
 
   console.log(formData, "productList");
+  console.log("Productlist",productList)
 
   return (
     <Fragment>
