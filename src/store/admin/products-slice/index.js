@@ -29,7 +29,7 @@ export const fetchAllProducts = createAsyncThunk(
   async () => {
     //http://localhost:5000/api/admin/products/get
     const result = await axios.get(
-      "/api/admin/products/get"
+      "https://server-app-six.vercel.app/api/admin/products/get"
     );
 
     console.log("Fetch all products",result.data);
