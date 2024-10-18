@@ -40,10 +40,11 @@ function AdminProductTile({
               setCurrentEditedId(product?._id);
               setFormData(product);
             }}
+            className="hover:bg-green-700"
           >
             Edit
           </Button>
-          <Button onClick={() => handleDelete(product?._id)}>Delete</Button>
+          <Button onClick={() => handleDelete(product?._id)} className="hover:bg-red-700">Delete</Button>
         </CardFooter>
       </div>
     </Card>
