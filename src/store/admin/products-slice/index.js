@@ -82,6 +82,7 @@ const AdminProductsSlice = createSlice({
       .addCase(fetchAllProducts.rejected, (state, action) => {
         state.isLoading = false;
         state.productList = [];
+        console.log("Rejected")
       });
   },
 });
