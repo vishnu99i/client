@@ -51,7 +51,7 @@ function ProductImageUpload({
     data.append("my_file", imageFile);
     //http://localhost:5000/api/admin/products/upload-image
     const response = await axios.post(
-      "/api/admin/products/upload-image",
+      "https://server-app-six.vercel.app/api/admin/products/upload-image",
       data
     );
     console.log(response, "response");
@@ -76,7 +76,7 @@ function ProductImageUpload({
         onDrop={handleDrop}
         className={`${
           isEditMode ? "opacity-60" : ""
-        } border-2 border-dashed rounded-lg p-4`}
+        } border-2 border-dashed border-slate-800 rounded-lg p-4`}
       >
         <Input
           id="image-upload"

@@ -42,10 +42,10 @@ function MenuItems({ setOpen }) {
             navigate(menuItem.path);
             setOpen ? setOpen(false) : null;
           }}
-          className="flex cursor-pointer text-xl items-center gap-2 rounded-md px-3 py-2 text-muted-foreground hover:bg-muted hover:text-foreground"
+          className="flex cursor-pointer text-xl items-center gap-2 rounded-md px-3 py-2 text-muted-foreground hover:bg-muted hover:text-foreground hover:scale-105 ease-in-out duration-300"
         >
           {menuItem.icon}
-          <span>{menuItem.label}</span>
+          <span className="text-slate-900 font-bold">{menuItem.label}</span>
         </div>
       ))}
     </nav>
@@ -58,7 +58,7 @@ function AdminSideBar({ open, setOpen }) {
   return (
     <Fragment>
       <Sheet open={open} onOpenChange={setOpen}>
-        <SheetContent side="left" className="w-64">
+        <SheetContent side="left" className="w-auto">
           <div className="flex flex-col h-full">
             <SheetHeader className="border-b">
               <SheetTitle className="flex gap-2 mt-5 mb-5">

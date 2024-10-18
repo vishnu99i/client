@@ -42,7 +42,7 @@ function AdminDashboard() {
         // isEditMode={currentEditedId !== null}
       />
       <Button onClick={handleUploadFeatureImage} className="mt-5 w-full">
-        Upload
+        Upload Banner Image
       </Button>
       <div className="flex flex-col gap-4 mt-5">
         {featureImageList && featureImageList.length > 0
@@ -50,7 +50,7 @@ function AdminDashboard() {
               <div className="relative">
                 <img
                   src={featureImgItem.image}
-                  className="w-full h-[300px] object-cover rounded-t-lg"
+                  className="w-full h-auto object-contain sm:object-cover rounded-lg"
                 />
               </div>
             ))
