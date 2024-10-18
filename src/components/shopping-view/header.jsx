@@ -1,4 +1,4 @@
-import { HousePlug, LogOut, Menu, ShoppingCart, UserCog } from "lucide-react";
+import { HousePlug, LogOut, Menu, ShoppingCart, UserCog, Shirt } from "lucide-react";
 import {
   Link,
   useLocation,
@@ -54,7 +54,7 @@ function MenuItems() {
       {shoppingViewHeaderMenuItems.map((menuItem) => (
         <Label
           onClick={() => handleNavigate(menuItem)}
-          className="text-sm font-medium cursor-pointer"
+          className="text-xl font-bold cursor-pointer hover:translate-x-10 md:hover:translate-x-0 hover:scale-125 ease-in-out duration-300"
           key={menuItem.id}
         >
           {menuItem.label}
@@ -88,7 +88,7 @@ function HeaderRightContent() {
           onClick={() => setOpenCartSheet(true)}
           variant="outline"
           size="icon"
-          className="relative"
+          className="relative hover:scale-105 ease-in-out duration-300"
         >
           <ShoppingCart className="w-6 h-6" />
           <span className="absolute top-[-5px] right-[2px] font-bold text-sm">
@@ -108,7 +108,7 @@ function HeaderRightContent() {
 
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Avatar className="bg-black">
+          <Avatar className="bg-black hover:scale-110 ease-in-out duration-300">
             <AvatarFallback className="bg-black text-white font-extrabold">
               {user?.userName[0].toUpperCase()}
             </AvatarFallback>
@@ -139,8 +139,8 @@ function ShoppingHeader() {
     <header className="sticky top-0 z-40 w-full border-b bg-background">
       <div className="flex h-16 items-center justify-between px-4 md:px-6">
         <Link to="/shop/home" className="flex items-center gap-2">
-          <HousePlug className="h-6 w-6" />
-          <span className="font-bold">Ecommerce</span>
+          <Shirt className="h-6 w-6 hover:scale-125 ease-in-out duration-300" />
+          <span className="font-bold text-2xl hover:scale-105 ease-in-out duration-300">WebShopping</span>
         </Link>
         <Sheet>
           <SheetTrigger asChild>

@@ -3,6 +3,7 @@ import {
   ChartNoAxesCombined,
   LayoutDashboard,
   ShoppingBasket,
+  ShieldCheck
 } from "lucide-react";
 import { Fragment } from "react";
 import { useNavigate } from "react-router-dom";
@@ -61,8 +62,8 @@ function AdminSideBar({ open, setOpen }) {
           <div className="flex flex-col h-full">
             <SheetHeader className="border-b">
               <SheetTitle className="flex gap-2 mt-5 mb-5">
-                <ChartNoAxesCombined size={30} />
-                <h1 className="text-2xl font-extrabold">Admin Panel</h1>
+                <ShieldCheck size={30} />
+                <h1 className="text-2xl font-extrabold hover:scale-105 ease-in-out duration-300">Admin Panel</h1>
               </SheetTitle>
             </SheetHeader>
             <MenuItems setOpen={setOpen} />
@@ -74,8 +75,8 @@ function AdminSideBar({ open, setOpen }) {
           onClick={() => navigate("/admin/dashboard")}
           className="flex cursor-pointer items-center gap-2"
         >
-          <ChartNoAxesCombined size={30} />
-          <h1 className="text-2xl font-extrabold">Admin Panel</h1>
+          <ShieldCheck size={30} />
+          <h1 className="text-2xl font-extrabold hover:scale-105 ease-in-out duration-300">Admin Panel</h1>
         </div>
         <MenuItems />
       </aside>
