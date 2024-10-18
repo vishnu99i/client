@@ -44,13 +44,14 @@ function AdminOrdersView() {
         <CardTitle className="hover:scale-105 hover:translate-x-5 ease-in-out duration-300">All Orders</CardTitle>
       </CardHeader>
       <CardContent>
-        <Table>
+        <Table className="overflow-x-scroll">
           <TableHeader>
             <TableRow>
               <TableHead className="hover:scale-105 ease-in-out duration-300 text-slate-900 font-bold">Order ID</TableHead>
               <TableHead className="hover:scale-105 ease-in-out duration-300 text-slate-900 font-bold">Order Date</TableHead>
-              <TableHead className="hover:scale-105 ease-in-out duration-300 text-slate-900 font-bold">Order Status</TableHead>
               <TableHead className="hover:scale-105 ease-in-out duration-300 text-slate-900 font-bold">Order Price</TableHead>
+              <TableHead className="hover:scale-105 ease-in-out duration-300 text-slate-900 font-bold">Order Status</TableHead>
+              
               <TableHead>
                 <span className="sr-only">Details</span>
               </TableHead>
@@ -60,8 +61,10 @@ function AdminOrdersView() {
             {orderList && orderList.length > 0
               ? orderList.map((orderItem) => (
                   <TableRow>
-                    <TableCell>{orderItem?._id}</TableCell>
+                    <TableCell>Hi</TableCell>
                     <TableCell>{orderItem?.orderDate.split("T")[0]}</TableCell>
+                    <TableCell>₹{orderItem?.totalAmount}</TableCell>
+
                     <TableCell>
                       <Badge
                         className={`py-2 px-3 hover:scale-105 ease-in-out duration-300 ${
@@ -75,7 +78,6 @@ function AdminOrdersView() {
                         {orderItem?.orderStatus}
                       </Badge>
                     </TableCell>
-                    <TableCell>${orderItem?.totalAmount}</TableCell>
                     <TableCell>
                       <Dialog
                         open={openDetailsDialog}
@@ -88,7 +90,7 @@ function AdminOrdersView() {
                           onClick={() =>
                             handleFetchOrderDetails(orderItem?._id)
                           }
-                          className="hover:scale-105 ease-in-out duration-300"
+                          className="hover:scale-105 ease-in-out duration-300 text-[10px] break-words sm:text-sm whitespace-normal"
                         >
                           View Details
                         </Button>
