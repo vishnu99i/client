@@ -39,18 +39,18 @@ function AdminOrdersView() {
   }, [orderDetails]);
 
   return (
-    <Card>
+    <Card className="bg-inherit border-black">
       <CardHeader>
-        <CardTitle>All Orders</CardTitle>
+        <CardTitle className="hover:scale-105 hover:translate-x-5 ease-in-out duration-300">All Orders</CardTitle>
       </CardHeader>
       <CardContent>
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead>Order ID</TableHead>
-              <TableHead>Order Date</TableHead>
-              <TableHead>Order Status</TableHead>
-              <TableHead>Order Price</TableHead>
+              <TableHead className="hover:scale-105 ease-in-out duration-300 text-slate-900 font-bold">Order ID</TableHead>
+              <TableHead className="hover:scale-105 ease-in-out duration-300 text-slate-900 font-bold">Order Date</TableHead>
+              <TableHead className="hover:scale-105 ease-in-out duration-300 text-slate-900 font-bold">Order Status</TableHead>
+              <TableHead className="hover:scale-105 ease-in-out duration-300 text-slate-900 font-bold">Order Price</TableHead>
               <TableHead>
                 <span className="sr-only">Details</span>
               </TableHead>
@@ -59,12 +59,12 @@ function AdminOrdersView() {
           <TableBody>
             {orderList && orderList.length > 0
               ? orderList.map((orderItem) => (
-                  <TableRow>
+                  <TableRow className="hover:scale-105 ease-in-out duration-300">
                     <TableCell>{orderItem?._id}</TableCell>
                     <TableCell>{orderItem?.orderDate.split("T")[0]}</TableCell>
                     <TableCell>
                       <Badge
-                        className={`py-1 px-3 ${
+                        className={`py-2 px-3 hover:scale-105 ease-in-out duration-300 ${
                           orderItem?.orderStatus === "confirmed"
                             ? "bg-green-500"
                             : orderItem?.orderStatus === "rejected"
@@ -88,6 +88,7 @@ function AdminOrdersView() {
                           onClick={() =>
                             handleFetchOrderDetails(orderItem?._id)
                           }
+                          className="hover:scale-105 ease-in-out duration-300"
                         >
                           View Details
                         </Button>
