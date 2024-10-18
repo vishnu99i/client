@@ -11,7 +11,7 @@ export const addNewProduct = createAsyncThunk(
   async (formData) => {
     //http://localhost:5000/api/admin/products/add
     const result = await axios.post(
-      "/api/admin/products/add",
+      "https://server-app-six.vercel.app/api/admin/products/add",
       formData,
       {
         headers: {
@@ -42,7 +42,7 @@ export const editProduct = createAsyncThunk(
   async ({ id, formData }) => {
     //http://localhost:5000/api/admin/products/edit/${id}
     const result = await axios.put(
-      `/api/admin/products/edit/${id}`,
+      `https://server-app-six.vercel.app/api/admin/products/edit/${id}`,
       formData,
       {
         headers: {
@@ -60,7 +60,7 @@ export const deleteProduct = createAsyncThunk(
   async (id) => {
     //http://localhost:5000/api/admin/products/delete/${id}
     const result = await axios.delete(
-      `/api/admin/products/delete/${id}`
+      `https://server-app-six.vercel.app/api/admin/products/delete/${id}`
     );
 
     return result?.data;
