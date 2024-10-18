@@ -44,7 +44,7 @@ function AdminOrdersView() {
         <CardTitle className="hover:scale-105 hover:translate-x-5 ease-in-out duration-300">All Orders</CardTitle>
       </CardHeader>
       <CardContent>
-        <Table className="overflow-x-scroll">
+        <Table>
           <TableHeader>
             <TableRow>
               <TableHead className="hover:scale-105 ease-in-out duration-300 text-slate-900 font-bold">Order ID</TableHead>
@@ -61,7 +61,7 @@ function AdminOrdersView() {
             {orderList && orderList.length > 0
               ? orderList.map((orderItem) => (
                   <TableRow>
-                    <TableCell>Hi</TableCell>
+                    <TableCell>{orderItem?._id}</TableCell>
                     <TableCell>{orderItem?.orderDate.split("T")[0]}</TableCell>
                     <TableCell>₹{orderItem?.totalAmount}</TableCell>
 
