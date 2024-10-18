@@ -67,7 +67,7 @@ function AdminOrdersView() {
 
                     <TableCell>
                       <Badge
-                        className={`py-2 px-3 hover:scale-105 ease-in-out duration-300 ${
+                        className={`py-2 px-3 text-[10px] sm:text-sm hover:scale-105 ease-in-out duration-300 ${
                           orderItem?.orderStatus === "confirmed"
                             ? "bg-green-500"
                             : orderItem?.orderStatus === "rejected"
