@@ -38,7 +38,7 @@ function App() {
   console.log(isLoading, user);
 
   return (
-    <div className="flex flex-col overflow-hidden bg-gradient-to-r from-blue-200 to-blue-100">
+    <div className="flex flex-col overflow-hidden bg-gradient-to-r from-black to-slate-900">
       <Routes>
         <Route
           path="/"
