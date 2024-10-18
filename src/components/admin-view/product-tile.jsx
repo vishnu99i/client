@@ -15,11 +15,11 @@ function AdminProductTile({
           <img
             src={product?.image}
             alt={product?.title}
-            className="w-full h-[300px] object-contain rounded-t-lg"
+            className="w-full h-[150px] sm:h-[200px] object-contain rounded-t-lg"
           />
         </div>
-        <CardContent className="bg-slate-500">
-          <h2 className="text-xl font-bold mb-2 mt-2 text-slate-200">{product?.title}</h2>
+        <CardContent className="bg-slate-200">
+          <h2 className="text-xl font-bold mb-2 mt-2 text-slate-900">{product?.title}</h2>
           <div className="flex justify-between items-center mb-2">
             <span
               className={`${
@@ -33,18 +33,18 @@ function AdminProductTile({
             ) : null}
           </div>
         </CardContent>
-        <CardFooter className="flex justify-between items-center bg-slate-600">
+        <CardFooter className="flex justify-between items-center bg-slate-400">
           <Button
             onClick={() => {
               setOpenCreateProductsDialog(true);
               setCurrentEditedId(product?._id);
               setFormData(product);
             }}
-            className="hover:bg-green-700"
+            className="hover:bg-green-900"
           >
             Edit
           </Button>
-          <Button onClick={() => handleDelete(product?._id)} className="hover:bg-red-700">Delete</Button>
+          <Button onClick={() => handleDelete(product?._id)} className="hover:bg-red-900">Delete</Button>
         </CardFooter>
       </div>
     </Card>
