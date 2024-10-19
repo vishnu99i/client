@@ -18,13 +18,13 @@ function AdminProductTile({
             className="w-full h-[150px] sm:h-[200px] object-contain rounded-t-lg"
           />
         </div>
-        <CardContent className="bg-slate-200">
+        <CardContent className="bg-slate-300 h-[10vh]">
           <h2 className="text-xl font-bold mb-2 mt-2 text-slate-900">{product?.title}</h2>
           <div className="flex justify-between items-center mb-2">
             <span
               className={`${
                 product?.salePrice > 0 ? "line-through" : ""
-              } text-lg font-semibold text-primary`}
+              } text-lg font-bold text-primary`}
             >
             ₹{product?.price}
             </span>
@@ -33,7 +33,7 @@ function AdminProductTile({
             ) : null}
           </div>
         </CardContent>
-        <CardFooter className="grid sm:grid-cols-2 gap-1 pt-5 bg-slate-400">
+        <CardFooter className="grid sm:grid-cols-2 gap-1 pt-5 bg-slate-600 sm:pt-3 rounded-b-lg sm:h-[10vh]">
           <Button
             onClick={() => {
               setOpenCreateProductsDialog(true);
