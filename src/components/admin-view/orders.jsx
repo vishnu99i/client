@@ -39,25 +39,25 @@ function AdminOrdersView() {
   }, [orderDetails]);
 
   return (
-    <Card className="bg-inherit border-black">
+    <Card className="bg-inherit border-black w-[90vw]">
       <CardHeader>
-        <CardTitle className="hover:scale-105 hover:translate-x-5 ease-in-out duration-300">All Orders</CardTitle>
+        <CardTitle className="hover:scale-105 hover:translate-x-5 ease-in-out duration-300 text-slate-300">All Orders</CardTitle>
       </CardHeader>
       <CardContent>
-        <Table>
+        <Table className="overflow-x-scroll">
           <TableHeader>
             <TableRow>
-              <TableHead className="hover:scale-105 ease-in-out duration-300 text-slate-900 font-bold">Order ID</TableHead>
-              <TableHead className="hover:scale-105 ease-in-out duration-300 text-slate-900 font-bold">Order Date</TableHead>
-              <TableHead className="hover:scale-105 ease-in-out duration-300 text-slate-900 font-bold">Order Price</TableHead>
-              <TableHead className="hover:scale-105 ease-in-out duration-300 text-slate-900 font-bold">Order Status</TableHead>
+              <TableHead className="hover:scale-105 ease-in-out duration-300 text-slate-300 font-bold">Order ID</TableHead>
+              <TableHead className="hover:scale-105 ease-in-out duration-300 text-slate-300 font-bold">Order Date</TableHead>
+              <TableHead className="hover:scale-105 ease-in-out duration-300 text-slate-300 font-bold">Order Price</TableHead>
+              <TableHead className="hover:scale-105 ease-in-out duration-300 text-slate-300 font-bold">Order Status</TableHead>
               
               <TableHead>
                 <span className="sr-only">Details</span>
               </TableHead>
             </TableRow>
           </TableHeader>
-          <TableBody>
+          <TableBody className="text-slate-300">
             {orderList && orderList.length > 0
               ? orderList.map((orderItem) => (
                   <TableRow>
@@ -67,7 +67,7 @@ function AdminOrdersView() {
 
                     <TableCell>
                       <Badge
-                        className={`py-2 px-3 text-[10px] sm:text-sm hover:scale-105 ease-in-out duration-300 ${
+                        className={`py-2 px-3 hover:scale-105 border-slate-500 ease-in-out duration-300 ${
                           orderItem?.orderStatus === "confirmed"
                             ? "bg-green-500"
                             : orderItem?.orderStatus === "rejected"
@@ -90,7 +90,7 @@ function AdminOrdersView() {
                           onClick={() =>
                             handleFetchOrderDetails(orderItem?._id)
                           }
-                          className="hover:scale-105 ease-in-out duration-300 text-[10px] break-words sm:text-sm whitespace-normal"
+                          className="hover:scale-105 ease-in-out duration-300 text-[10px] break-words sm:text-sm whitespace-normal border bg-slate-950"
                         >
                           View Details
                         </Button>
