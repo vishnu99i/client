@@ -30,7 +30,7 @@ function AdminDashboard() {
   console.log(featureImageList, "featureImageList");
 
   return (
-    <div>
+    <div className="mt-[60px]">
       <ProductImageUpload
         imageFile={imageFile}
         setImageFile={setImageFile}
