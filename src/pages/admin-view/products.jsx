@@ -105,10 +105,12 @@ function AdminProducts() {
 
   return (
     <Fragment>
-      <div className="mb-5 w-full flex justify-end mt-[60px]">
-        <Button onClick={() => setOpenCreateProductsDialog(true)} className="border">
+      <div className="mb-16 w-full flex justify-end mt-[60px]">
+        <div>
+        <Button onClick={() => setOpenCreateProductsDialog(true)} className="border bg-slate-950 fixed right-6 z-10 animate-bounce">
           Add New Product
         </Button>
+        </div>
       </div>
       <div className="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {productList && productList.length > 0
