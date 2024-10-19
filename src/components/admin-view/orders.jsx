@@ -42,6 +42,7 @@ function AdminOrdersView() {
     <Card className="bg-inherit border-black w-[90vw]">
       <CardHeader>
         <CardTitle className="hover:scale-105 hover:translate-x-5 ease-in-out duration-300 text-slate-300">All Orders</CardTitle>
+        <h3 className="text-orange-500 animate-pulse">To see more details scroll from left to right</h3>
       </CardHeader>
       <CardContent>
         <Table className="overflow-x-scroll">
@@ -61,7 +62,7 @@ function AdminOrdersView() {
             {orderList && orderList.length > 0
               ? orderList.map((orderItem) => (
                   <TableRow>
-                    <TableCell>{orderItem?._id}</TableCell>
+                    <TableCell className="text-blue-500">{orderItem?._id}</TableCell>
                     <TableCell>{orderItem?.orderDate.split("T")[0]}</TableCell>
                     <TableCell>₹{orderItem?.totalAmount}</TableCell>
 
