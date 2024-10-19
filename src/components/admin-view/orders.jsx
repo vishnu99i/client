@@ -42,7 +42,7 @@ function AdminOrdersView() {
     <Card className="bg-inherit border-black w-[90vw] md:w-[80vw]">
       <CardHeader>
         <CardTitle className="hover:scale-105 hover:translate-x-5 ease-in-out duration-300 text-slate-300">All Orders</CardTitle>
-        <h3 className="text-orange-500 animate-pulse">To see more details scroll from left to right</h3>
+        <h3 className="text-orange-500 animate-pulse sm:hidden">To see more details scroll from left to right</h3>
       </CardHeader>
       <CardContent>
         <Table className="overflow-x-scroll">
