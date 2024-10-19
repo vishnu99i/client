@@ -43,31 +43,31 @@ function AdminOrderDetailsView({ orderDetails }) {
   }
 
   return (
-    <DialogContent className="sm:max-w-[600px]">
+    <DialogContent className="sm:max-w-[600px] max-h-[90vh] overflow-y-scroll bg-gradient-to-r from-black via-slate-900 to-slate-700">
       <div className="grid gap-6">
         <div className="grid gap-2">
           <div className="flex mt-6 items-center justify-between">
-            <p className="font-medium">Order ID</p>
-            <Label>{orderDetails?._id}</Label>
+            <p className="font-medium text-slate-300">Order ID</p>
+            <Label className="text-slate-300">{orderDetails?._id}</Label>
           </div>
           <div className="flex mt-2 items-center justify-between">
-            <p className="font-medium">Order Date</p>
-            <Label>{orderDetails?.orderDate.split("T")[0]}</Label>
+            <p className="font-medium text-slate-300">Order Date</p>
+            <Label className="text-slate-300">{orderDetails?.orderDate.split("T")[0]}</Label>
           </div>
           <div className="flex mt-2 items-center justify-between">
-            <p className="font-medium">Order Price</p>
-            <Label>${orderDetails?.totalAmount}</Label>
+            <p className="font-medium text-slate-300">Order Price</p>
+            <Label className="text-slate-300">₹{orderDetails?.totalAmount}</Label>
           </div>
           <div className="flex mt-2 items-center justify-between">
-            <p className="font-medium">Payment method</p>
-            <Label>{orderDetails?.paymentMethod}</Label>
+            <p className="font-medium text-slate-300">Payment method</p>
+            <Label className="text-slate-300">{orderDetails?.paymentMethod}</Label>
           </div>
           <div className="flex mt-2 items-center justify-between">
-            <p className="font-medium">Payment Status</p>
-            <Label>{orderDetails?.paymentStatus}</Label>
+            <p className="font-medium text-slate-300">Payment Status</p>
+            <Label className="text-slate-300">{orderDetails?.paymentStatus}</Label>
           </div>
           <div className="flex mt-2 items-center justify-between">
-            <p className="font-medium">Order Status</p>
+            <p className="font-medium text-slate-300">Order Status</p>
             <Label>
               <Badge
                 className={`py-1 px-3 ${
@@ -86,14 +86,14 @@ function AdminOrderDetailsView({ orderDetails }) {
         <Separator />
         <div className="grid gap-4">
           <div className="grid gap-2">
-            <div className="font-medium">Order Details</div>
+            <div className="font-medium text-slate-300">Order Details</div>
             <ul className="grid gap-3">
               {orderDetails?.cartItems && orderDetails?.cartItems.length > 0
                 ? orderDetails?.cartItems.map((item) => (
-                    <li className="flex items-center justify-between">
+                    <li className="flex items-center justify-between text-slate-300">
                       <span>Title: {item.title}</span>
                       <span>Quantity: {item.quantity}</span>
-                      <span>Price: ${item.price}</span>
+                      <span>Price: ₹{item.price}</span>
                     </li>
                   ))
                 : null}
@@ -102,7 +102,7 @@ function AdminOrderDetailsView({ orderDetails }) {
         </div>
         <div className="grid gap-4">
           <div className="grid gap-2">
-            <div className="font-medium">Shipping Info</div>
+            <div className="font-medium text-slate-300">Shipping Info</div>
             <div className="grid gap-0.5 text-muted-foreground">
               <span>{user.userName}</span>
               <span>{orderDetails?.addressInfo?.address}</span>
