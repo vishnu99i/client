@@ -51,7 +51,7 @@ function AdminOrdersView() {
               <TableHead className="hover:scale-105 ease-in-out duration-300 text-slate-300 font-bold">Order ID</TableHead>
               <TableHead className="hover:scale-105 ease-in-out duration-300 text-slate-300 font-bold">Order Date</TableHead>
               <TableHead className="hover:scale-105 ease-in-out duration-300 text-slate-300 font-bold">Order Price</TableHead>
-              <TableHead className="hover:scale-105 ease-in-out duration-300 text-slate-300 font-bold">Order Status</TableHead>
+              <TableHead className="hover:scale-105 ease-in-out duration-300 text-slate-300 font-bold text-center">Order Status</TableHead>
               
               <TableHead>
                 <span className="sr-only">Details</span>
