@@ -107,7 +107,7 @@ function AdminProducts() {
     <Fragment>
       <div className="mb-16 w-full flex justify-end mt-[60px]">
         <div>
-        <Button onClick={() => setOpenCreateProductsDialog(true)} className="border bg-slate-950 fixed right-6 z-10 animate-bounce">
+        <Button onClick={() => setOpenCreateProductsDialog(true)} className="border bg-slate-950 fixed right-6 z-10 animate-bounce hover:animate-none">
           Add New Product
         </Button>
         </div>
@@ -133,9 +133,9 @@ function AdminProducts() {
           setFormData(initialFormData);
         }}
       >
-        <SheetContent side="right" className="overflow-auto">
+        <SheetContent side="right" className="overflow-auto bg-gradient-to-r from-black to-slate-700 border-transparent">
           <SheetHeader>
-            <SheetTitle>
+            <SheetTitle className="text-slate-300 animate-pulse hover:scale-105 ease-in-out">
               {currentEditedId !== null ? "Edit Product" : "Add New Product"}
             </SheetTitle>
           </SheetHeader>
