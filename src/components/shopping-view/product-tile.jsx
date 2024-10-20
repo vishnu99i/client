@@ -33,7 +33,7 @@ function ShoppingProductTile({
         </div>
         <CardContent className="p-4 bg-slate-300">
           <h2 className="text-lg sm:text-xl font-bold mb-2">{product?.title}</h2>
-          <div className="flex justify-between items-center mb-2 h-">
+          <div className="flex justify-between items-center mb-2">
             <span className="text-[16px] text-muted-foreground text-slate-900">
               {categoryOptionsMap[product?.category]}
             </span>
