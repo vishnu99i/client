@@ -170,7 +170,7 @@ function ShoppingHome() {
       <section className="py-12 text-slate-300 bg-gradient-to-r from-black to-slate-900">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 hover:scale-105 ease-in-out duration-300">
-            Shop by category
+            Category
           </h2>
           <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
             {categoriesWithIcon.map((categoryItem) => (
@@ -192,7 +192,7 @@ function ShoppingHome() {
 
       <section className=" text-slate-300 bg-gradient-to-r from-black to-slate-900">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 hover:scale-110 ease-in-out duration-300">Shop by Brand</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 hover:scale-110 ease-in-out duration-300">Choose your Brand</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {brandsWithIcon.map((brandItem) => (
               <Card
@@ -211,7 +211,7 @@ function ShoppingHome() {
       <section className="py-12 bg-gradient-to-r from-black to-slate-900">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 hover:scale-105 ease-in-out duration-300 text-slate-300">
-            Feature Products
+            Product Listing
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
             {productList && productList.length > 0
