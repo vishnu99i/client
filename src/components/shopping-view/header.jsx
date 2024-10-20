@@ -79,7 +79,7 @@ function HeaderRightContent() {
     dispatch(fetchCartItems(user?.id));
   }, [dispatch]);
 
-  console.log(cartItems, "sangam");
+  console.log(cartItems);
 
   return (
     <div className="flex lg:items-center lg:flex-row flex-col gap-4">
@@ -88,7 +88,7 @@ function HeaderRightContent() {
           onClick={() => setOpenCartSheet(true)}
           variant="outline"
           size="icon"
-          className="relative hover:scale-105 ease-in-out duration-300"
+          className="relative hover:scale-105 ease-in-out duration-300 text-slate-950 hover:bg-slate-300"
         >
           <ShoppingCart className="w-6 h-6" />
           <span className="absolute top-[-5px] right-[2px] font-bold text-sm">
@@ -109,12 +109,12 @@ function HeaderRightContent() {
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Avatar className="bg-black hover:scale-110 ease-in-out duration-300">
-            <AvatarFallback className="bg-black text-white font-extrabold">
+            <AvatarFallback className="bg-black text-white font-extrabold border">
               {user?.userName[0].toUpperCase()}
             </AvatarFallback>
           </Avatar>
         </DropdownMenuTrigger>
-        <DropdownMenuContent side="right" className="w-56">
+        <DropdownMenuContent side="right" className="w-auto bg-black text-slate-300">
           <DropdownMenuLabel>Logged in as {user?.userName}</DropdownMenuLabel>
           <DropdownMenuSeparator />
           <DropdownMenuItem onClick={() => navigate("/shop/account")}>
@@ -136,10 +136,10 @@ function ShoppingHeader() {
   const { isAuthenticated } = useSelector((state) => state.auth);
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b bg-background">
+    <header className="sticky top-0 z-40 w-full border-b bg-gradient-to-r from-black to-slate-900 text-slate-300">
       <div className="flex h-16 items-center justify-between px-4 md:px-6">
         <Link to="/shop/home" className="flex items-center gap-2">
-          <Shirt className="h-6 w-6 hover:scale-125 ease-in-out duration-300" />
+          <Shirt className="h-6 w-6 hover:scale-125 ease-in-out duration-300"/> {/* <HousePlug className="h-6 w-6" /> */}
           <span className="font-bold text-2xl hover:scale-105 ease-in-out duration-300">WebShopping</span>
         </Link>
         <Sheet>
@@ -149,7 +149,7 @@ function ShoppingHeader() {
               <span className="sr-only">Toggle header menu</span>
             </Button>
           </SheetTrigger>
-          <SheetContent side="left" className="w-full max-w-xs">
+          <SheetContent side="left" className="max-w-xs w-auto bg-gradient-to-r from-black to-slate-900 text-slate-400 border-none">
             <MenuItems />
             <HeaderRightContent />
           </SheetContent>
