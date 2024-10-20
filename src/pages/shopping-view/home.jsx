@@ -172,7 +172,7 @@ function ShoppingHome() {
           <h2 className="text-2xl sm:text-3xl font-medium sm:font-bold text-center mb-5 bg-slate-950 rounded-xl pb-2">
               Category
           </h2>
-          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
             {categoriesWithIcon.map((categoryItem) => (
               <Card
                 onClick={() =>
