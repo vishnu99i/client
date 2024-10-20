@@ -44,9 +44,9 @@ const categoriesWithIcon = [
 ];
 
 const brandsWithIcon = [
-  { id: "nike", label: "Nike"},
+  { id: "nike", label: "Nike"}, //icon: Shirt
   { id: "adidas", label: "Adidas"},
-  { id: "puma", label: "Puma",},
+  { id: "puma", label: "Puma"},
   { id: "levi", label: "Levi's"},
   { id: "zara", label: "Zara"},
   { id: "h&m", label: "H&M"},
@@ -126,7 +126,7 @@ function ShoppingHome() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <div className="relative w-full h-[200px] md:h-[600px] overflow-hidden">
+      <div className="relative w-full h-[300px] md:h-[600px] overflow-hidden">
         {featureImageList && featureImageList.length > 0
           ? featureImageList.map((slide, index) => (
               <img
@@ -135,9 +135,11 @@ function ShoppingHome() {
                 className={`${
                   index === currentSlide ? "opacity-100" : "opacity-0"
                 } absolute top-0 left-0 w-full h-full object-contain md:object-cover transition-opacity duration-1000`}
+                onClick={()=> console.log("slide",slide)}
               />
             ))
           : null}
+          {console.log(featureImageList)}
         <Button
           variant="outline"
           size="icon"
@@ -165,21 +167,21 @@ function ShoppingHome() {
           <ChevronRightIcon className="w-4 h-4" />
         </Button>
       </div>
-      <section className="py-12 bg-gray-50">
+      <section className="py-12 text-slate-300 bg-gradient-to-r from-black to-slate-900">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 hover:scale-105 ease-in-out duration-300">
             Shop by category
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
             {categoriesWithIcon.map((categoryItem) => (
               <Card
                 onClick={() =>
                   handleNavigateToListingPage(categoryItem, "category")
                 }
-                className="cursor-pointer hover:shadow-lg transition-shadow hover:scale-105 ease-in-out duration-300"
+                className="cursor-pointer hover:shadow-lg transition-shadow hover:scale-105 ease-in-out duration-300 bg-gradient-to-r from-slate-950 to-slate-900 text-slate-300"
               >
                 <CardContent className="flex flex-col items-center justify-center p-6">
-                  <categoryItem.icon className="w-12 h-12 mb-4 text-primary" />
+                  <categoryItem.icon className="w-12 h-12 mb-4 text-slate-500" />
                   <span className="font-bold">{categoryItem.label}</span>
                 </CardContent>
               </Card>
@@ -188,17 +190,17 @@ function ShoppingHome() {
         </div>
       </section>
 
-      <section className="py-12 bg-gray-50">
+      <section className=" text-slate-300 bg-gradient-to-r from-black to-slate-900">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8 hover:scale-110 ease-in-out duration-300">Shop by Brand</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 hover:scale-110 ease-in-out duration-300">Shop by Brand</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {brandsWithIcon.map((brandItem) => (
               <Card
                 onClick={() => handleNavigateToListingPage(brandItem, "brand")}
-                className="cursor-pointer hover:shadow-lg transition-shadow hover:scale-105 ease-in-out duration-300"
+                className="cursor-pointer hover:shadow-lg transition-shadow hover:scale-105 ease-in-out duration-300 bg-slate-900 hover:bg-slate-950 text-slate-300"
               >
                 <CardContent className="flex flex-col items-center justify-center p-6">
-                  <span className="font-bold">{brandItem.label}</span>
+                <span className="font-bold">{brandItem.label}</span>
                 </CardContent>
               </Card>
             ))}
@@ -208,7 +210,7 @@ function ShoppingHome() {
 
       <section className="py-12">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 hover:scale-105 ease-in-out duration-300">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 hover:scale-105 ease-in-out duration-300 text-slate-300">
             Feature Products
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
