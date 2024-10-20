@@ -169,7 +169,7 @@ function ShoppingHome() {
       </div>
       <section className="pt-3 sm:pt-12 text-slate-300 bg-gradient-to-r from-black to-slate-900 border rounded-2xl mx-3 pb-3 border-slate-600">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-medium sm:font-bold text-center mb-5 bg-slate-950 rounded-xl pb-2">
+          <h2 className="text-2xl sm:text-3xl  font-bold text-center mb-5 bg-slate-950 rounded-xl pb-2">
               Category
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
@@ -192,7 +192,7 @@ function ShoppingHome() {
 
       <section className="pt-3 text-slate-300 bg-gradient-to-r from-black to-slate-900 border mt-3 rounded-2xl mx-3 pb-3 border-slate-600">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-medium sm:font-bold text-center mb-5 bg-slate-950 rounded-xl pb-2">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-5 bg-slate-950 rounded-xl pb-2">
             Choose your Brand
           </h2>
           <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
