@@ -125,7 +125,7 @@ function ShoppingHome() {
   }, [dispatch]);
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-gradient-to-r from-black to-slate-900">
       <div className="relative w-full h-[300px] md:h-[600px] overflow-hidden bg-gradient-to-r from-black to-slate-900">
         {featureImageList && featureImageList.length > 0
           ? featureImageList.map((slide, index) => (
@@ -180,7 +180,7 @@ function ShoppingHome() {
                 }
                 className="cursor-pointer hover:shadow-lg transition-shadow hover:scale-105 ease-in-out duration-300 bg-gradient-to-r from-slate-950 to-slate-900 text-slate-300"
               >
-                <CardContent className="flex flex-col items-center justify-center p-3 text-slate-500">
+                <CardContent className="flex flex-col items-center justify-center p-6 text-slate-500">
                   <categoryItem.icon className="w-12 h-12 mb-4 text-slate-300" />
                   <span className="font-semibold sm:font-bold">{categoryItem.label}</span>
                 </CardContent>
@@ -201,7 +201,7 @@ function ShoppingHome() {
                 onClick={() => handleNavigateToListingPage(brandItem, "brand")}
                 className="cursor-pointer hover:shadow-lg transition-shadow hover:scale-105 ease-in-out duration-300 bg-transparent hover:bg-slate-950 text-slate-300"
               >
-                <CardContent className="flex flex-col items-center justify-center p-3">
+                <CardContent className="flex flex-col items-center justify-center p-6">
                 <span className="font-medium sm:font-bold">{brandItem.label}</span>
                 </CardContent>
               </Card>
