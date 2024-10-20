@@ -32,12 +32,12 @@ function ShoppingProductTile({
           ) : null}
         </div>
         <CardContent className="p-4 bg-slate-300">
-          <h2 className="text-lg sm:text-xl font-bold mb-2">{product?.title}</h2>
-          <div className="flex justify-between items-center mb-2">
-            <span className="text-[16px] text-muted-foreground text-slate-900">
+          <h2 className="text-lg sm:text-xl font-bold mb-2 text-slate-900 hover:scale-105 ease-in-out duration-300">{product?.title}</h2>
+          <div className="flex flex-col sm:flex-row sm:justify-between items-center mb-2">
+            <span className="text-[16px] font-bold text-muted-foreground text-yellow-900 hover:scale-105 ease-in-out duration-300">
               {categoryOptionsMap[product?.category]}
             </span>
-            <span className="text-[16px] text-muted-foreground text-slate-900">
+            <span className="text-[16px] font-bold text-muted-foreground text-rose-950 hover:scale-105 ease-in-out duration-300">
               {brandOptionsMap[product?.brand]}
             </span>
           </div>
@@ -45,13 +45,13 @@ function ShoppingProductTile({
             <span
               className={`${
                 product?.salePrice > 0 ? "line-through" : ""
-              } text-lg font-semibold text-primary`}
+              } text-xl font-semibold text-primary text-red-700 hover:scale-105 ease-in-out duration-300`}
             >
-              ${product?.price}
+              ₹{product?.price}
             </span>
             {product?.salePrice > 0 ? (
-              <span className="text-lg font-semibold text-primary">
-                ${product?.salePrice}
+              <span className="text-xl font-semibold text-primary text-green-700 hover:scale-105 ease-in-out duration-300">
+                ₹{product?.salePrice}
               </span>
             ) : null}
           </div>
