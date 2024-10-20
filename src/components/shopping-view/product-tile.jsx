@@ -15,7 +15,7 @@ function ShoppingProductTile({
           <img
             src={product?.image}
             alt={product?.title}
-            className="w-full h-[300px] object-cover rounded-t-lg"
+            className="w-full h-[150px] sm:h-[200px] object-contain rounded-t-lg"
           />
           {product?.totalStock === 0 ? (
             <Badge className="absolute top-2 left-2 bg-red-500 hover:bg-red-600">
@@ -26,18 +26,18 @@ function ShoppingProductTile({
               {`Only ${product?.totalStock} items left`}
             </Badge>
           ) : product?.salePrice > 0 ? (
-            <Badge className="absolute top-2 left-2 bg-red-500 hover:bg-red-600">
+            <Badge className="absolute top-2 left-2 bg-red-500 hover:bg-red-600 animate-pulse">
               Sale
             </Badge>
           ) : null}
         </div>
-        <CardContent className="p-4">
-          <h2 className="text-xl font-bold mb-2">{product?.title}</h2>
-          <div className="flex justify-between items-center mb-2">
-            <span className="text-[16px] text-muted-foreground">
+        <CardContent className="p-4 bg-slate-300">
+          <h2 className="text-lg sm:text-xl font-bold mb-2">{product?.title}</h2>
+          <div className="flex justify-between items-center mb-2 h-">
+            <span className="text-[16px] text-muted-foreground text-slate-900">
               {categoryOptionsMap[product?.category]}
             </span>
-            <span className="text-[16px] text-muted-foreground">
+            <span className="text-[16px] text-muted-foreground text-slate-900">
               {brandOptionsMap[product?.brand]}
             </span>
           </div>
@@ -57,7 +57,7 @@ function ShoppingProductTile({
           </div>
         </CardContent>
       </div>
-      <CardFooter>
+      <CardFooter className="bg-slate-800 rounded-b-lg pb-0 py-3">
         {product?.totalStock === 0 ? (
           <Button className="w-full opacity-60 cursor-not-allowed">
             Out Of Stock
@@ -65,7 +65,7 @@ function ShoppingProductTile({
         ) : (
           <Button
             onClick={() => handleAddtoCart(product?._id, product?.totalStock)}
-            className="w-full"
+            className="w-full border hover:scale-105 ease-in-out duration-300 hover:bg-slate-950"
           >
             Add to cart
           </Button>
