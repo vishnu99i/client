@@ -167,10 +167,10 @@ function ShoppingHome() {
           <ChevronRightIcon className="w-4 h-4" />
         </Button>
       </div>
-      <section className="pt-3 sm:pt-12 text-slate-300 bg-gradient-to-r from-black to-slate-900">
+      <section className="pt-3 sm:pt-12 text-slate-300 bg-gradient-to-r from-black to-slate-900 border rounded-2xl mx-3 pb-3 border-slate-600">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 hover:scale-105 ease-in-out duration-300">
-            Category
+          <h2 className="text-2xl sm:text-3xl font-medium sm:font-bold text-center mb-5 bg-slate-950 rounded-xl pb-2">
+              Category
           </h2>
           <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
             {categoriesWithIcon.map((categoryItem) => (
@@ -180,9 +180,9 @@ function ShoppingHome() {
                 }
                 className="cursor-pointer hover:shadow-lg transition-shadow hover:scale-105 ease-in-out duration-300 bg-gradient-to-r from-slate-950 to-slate-900 text-slate-300"
               >
-                <CardContent className="flex flex-col items-center justify-center p-6">
-                  <categoryItem.icon className="w-12 h-12 mb-4 text-slate-500" />
-                  <span className="font-bold">{categoryItem.label}</span>
+                <CardContent className="flex flex-col items-center justify-center p-3 text-slate-500">
+                  <categoryItem.icon className="w-12 h-12 mb-4 text-slate-300" />
+                  <span className="font-semibold sm:font-bold">{categoryItem.label}</span>
                 </CardContent>
               </Card>
             ))}
@@ -190,17 +190,19 @@ function ShoppingHome() {
         </div>
       </section>
 
-      <section className="pt-7 text-slate-300 bg-gradient-to-r from-black to-slate-900">
+      <section className="pt-3 text-slate-300 bg-gradient-to-r from-black to-slate-900 border mt-3 rounded-2xl mx-3 pb-3 border-slate-600">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 hover:scale-110 ease-in-out duration-300">Choose your Brand</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <h2 className="text-2xl sm:text-3xl font-medium sm:font-bold text-center mb-5 bg-slate-950 rounded-xl pb-2">
+            Choose your Brand
+          </h2>
+          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {brandsWithIcon.map((brandItem) => (
               <Card
                 onClick={() => handleNavigateToListingPage(brandItem, "brand")}
-                className="cursor-pointer hover:shadow-lg transition-shadow hover:scale-105 ease-in-out duration-300 bg-slate-900 hover:bg-slate-950 text-slate-300"
+                className="cursor-pointer hover:shadow-lg transition-shadow hover:scale-105 ease-in-out duration-300 bg-transparent hover:bg-slate-950 text-slate-300"
               >
-                <CardContent className="flex flex-col items-center justify-center p-6">
-                <span className="font-bold">{brandItem.label}</span>
+                <CardContent className="flex flex-col items-center justify-center p-3">
+                <span className="font-medium sm:font-bold">{brandItem.label}</span>
                 </CardContent>
               </Card>
             ))}
@@ -210,7 +212,7 @@ function ShoppingHome() {
 
       <section className="pt-16 bg-gradient-to-r from-black to-slate-900">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 hover:scale-105 ease-in-out duration-300 text-slate-300">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 hover:scale-105 ease-in-out duration-300 text-slate-300 bg-slate-950 rounded-xl pb-2">
             Product Listing
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
