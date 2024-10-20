@@ -148,30 +148,32 @@ function ShoppingListing() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-6 p-4 md:p-6">
       <ProductFilter filters={filters} handleFilter={handleFilter} />
-      <div className="bg-background w-full rounded-lg shadow-sm">
-        <div className="p-4 border-b flex items-center justify-between">
-          <h2 className="text-xl font-extrabold hover:scale-105 ease-in-out duration-300">All Products</h2>
-          <div className="flex items-center gap-3">
-            <span className="text-muted-foreground">
-              {productList?.length} Products
-            </span>
+      <div className="bg-background w-full rounded-lg shadow-sm bg-gradient-to-r from-black to-slate-900">
+        <div className="p-4 border-b grid grid-cols-1 bg-gradient-to-r from-black to-slate-900 border rounded-xl">
+          <div className="flex justify-between">
+          <h2 className="text-xl sm:text-2xl font-extrabold hover:scale-105 ease-in-out duration-300 text-slate-300">All Products</h2>
+
+            
+            
+            
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button
                   variant="outline"
                   size="sm"
-                  className="flex items-center gap-1"
+                  className="flex items-center gap-1 hover:scale-95 ease-in-out duration-300 hover:bg-slate-700 hover:text-slate-100 font-bold bg-slate-300"
                 >
                   <ArrowUpDownIcon className="h-4 w-4" />
-                  <span>Sort by</span>
+                  <span className="sm:text-lg ">Sort by</span>
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-[200px]">
+              <DropdownMenuContent align="end" className="w-[200px] bg-gradient-to-r from-black to-slate-800 text-slate-300 rounded-lg font-mono">
                 <DropdownMenuRadioGroup value={sort} onValueChange={handleSort}>
                   {sortOptions.map((sortItem) => (
                     <DropdownMenuRadioItem
                       value={sortItem.id}
                       key={sortItem.id}
+                      className="hover:bg-slate-600"
                     >
                       {sortItem.label}
                     </DropdownMenuRadioItem>
@@ -180,8 +182,12 @@ function ShoppingListing() {
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
+
+          <span className="text-orange-700 text-lg sm:text-xl">
+              {productList?.length} Products
+          </span>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 p-4 bg-gradient-to-r from-black to-slate-900">
           {productList && productList.length > 0
             ? productList.map((productItem) => (
                 <ShoppingProductTile

@@ -6,7 +6,7 @@ import { Separator } from "../ui/separator";
 
 function ProductFilter({ filters, handleFilter }) {
   return (
-    <div className="bg-background rounded-lg shadow-sm">
+    <div className="text-slate-300 rounded-lg shadow-sm border border-slate-500">
       <div className="p-4 border-b">
         <h2 className="text-lg font-extrabold">Filters</h2>
       </div>
@@ -26,6 +26,7 @@ function ProductFilter({ filters, handleFilter }) {
                         filters[keyItem].indexOf(option.id) > -1
                       }
                       onCheckedChange={() => handleFilter(keyItem, option.id)}
+                      className="text-slate-100 bg-white"
                     />
                     {option.label}
                   </Label>
