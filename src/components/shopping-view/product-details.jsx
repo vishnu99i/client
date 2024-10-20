@@ -106,53 +106,51 @@ function ProductDetailsDialog({ open, setOpen, productDetails }) {
 
   return (
     <Dialog open={open} onOpenChange={handleDialogClose}>
-      <DialogContent className="grid grid-cols-2 gap-8 sm:p-12 max-w-[90vw] sm:max-w-[80vw] lg:max-w-[70vw]">
-        <div className="relative overflow-hidden rounded-lg">
+      <DialogContent className="grid grid-cols-2 gap-8 sm:p-12 max-w-[90vw] sm:max-w-[80vw] lg:max-w-[70vw] font-mono bg-gradient-to-r from-black to-slate-700 h-[95vh] overflow-y-scroll">
+        <div className="relative rounded-lg my-auto">
           <img
             src={productDetails?.image}
             alt={productDetails?.title}
-            width={600}
-            height={600}
-            className="aspect-square w-full object-cover"
+            className="aspect-square w-full object-contain h-[30vh]"
           />
         </div>
-        <div className="">
+        <div>
           <div>
-            <h1 className="text-3xl font-extrabold">{productDetails?.title}</h1>
-            <p className="text-muted-foreground text-2xl mb-5 mt-4">
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-300">{productDetails?.title}</h1>
+            <p className="text-muted-foreground text-xl sm:text-2xl mb-3 mt-2">
               {productDetails?.description}
             </p>
           </div>
           <div className="flex items-center justify-between">
             <p
-              className={`text-3xl font-bold text-primary ${
+              className={`text-3xl font-bold text-red-800 ${
                 productDetails?.salePrice > 0 ? "line-through" : ""
               }`}
             >
-              ${productDetails?.price}
+              ₹{productDetails?.price}
             </p>
             {productDetails?.salePrice > 0 ? (
-              <p className="text-2xl font-bold text-muted-foreground">
-                ${productDetails?.salePrice}
+              <p className="text-3xl font-bold text-green-700">
+                ₹{productDetails?.salePrice}
               </p>
             ) : null}
           </div>
           <div className="flex items-center gap-2 mt-2">
             <div className="flex items-center gap-0.5">
-              <StarRatingComponent rating={averageReview} />
+              <StarRatingComponent rating={averageReview} className="bg-slate-100"/>
             </div>
-            <span className="text-muted-foreground">
+            <span className="text-green-500">
               ({averageReview.toFixed(2)})
             </span>
           </div>
-          <div className="mt-5 mb-5">
+          <div className="mt-5">
             {productDetails?.totalStock === 0 ? (
-              <Button className="w-full opacity-60 cursor-not-allowed">
+              <Button className="w-full opacity-60 cursor-not-allowed border">
                 Out of Stock
               </Button>
             ) : (
               <Button
-                className="w-full"
+                className="w-full border hover:scale-95 ease-in-out duration-300"
                 onClick={() =>
                   handleAddToCart(
                     productDetails?._id,
@@ -164,19 +162,23 @@ function ProductDetailsDialog({ open, setOpen, productDetails }) {
               </Button>
             )}
           </div>
-          <Separator />
+          </div>
+
+          <Separator className="col-span-2"/>
+
+          <div className="col-span-2">
           <div className="max-h-[300px] overflow-auto">
-            <h2 className="text-xl font-bold mb-4">Reviews</h2>
+            <h2 className="text-xl font-bold text-blue-700">Reviews</h2>
             <div className="grid gap-6">
               {reviews && reviews.length > 0 ? (
                 reviews.map((reviewItem) => (
                   <div className="flex gap-4">
-                    <Avatar className="w-10 h-10 border">
+                    <Avatar className="w-10 h-10 border text-slate-300">
                       <AvatarFallback>
                         {reviewItem?.userName[0].toUpperCase()}
                       </AvatarFallback>
                     </Avatar>
-                    <div className="grid gap-1">
+                    <div className="grid gap-1 text-slate-300">
                       <div className="flex items-center gap-2">
                         <h3 className="font-bold">{reviewItem?.userName}</h3>
                       </div>
@@ -190,10 +192,10 @@ function ProductDetailsDialog({ open, setOpen, productDetails }) {
                   </div>
                 ))
               ) : (
-                <h1>No Reviews</h1>
+                <h1 className="text-slate-300">No Reviews</h1>
               )}
             </div>
-            <div className="mt-10 flex-col flex gap-2">
+            <div className="mt-1 flex-col flex gap-2 text-slate-300">
               <Label>Write a review</Label>
               <div className="flex gap-1">
                 <StarRatingComponent
@@ -210,6 +212,7 @@ function ProductDetailsDialog({ open, setOpen, productDetails }) {
               <Button
                 onClick={handleAddReview}
                 disabled={reviewMsg.trim() === ""}
+                className="border bg-slate-950 text-slate-100 hover:scale-95 ease-in-out duration-300"
               >
                 Submit
               </Button>

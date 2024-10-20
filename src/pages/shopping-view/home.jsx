@@ -167,9 +167,9 @@ function ShoppingHome() {
           <ChevronRightIcon className="w-4 h-4" />
         </Button>
       </div>
-      <section className="pt-3 sm:pt-12 text-slate-300 bg-gradient-to-r from-black to-slate-900 border rounded-2xl mx-3 pb-3 border-slate-600">
+      <section className="pt-3 sm:pt-12 text-slate-300 bg-gradient-to-r from-black to-slate-900 border rounded-2xl mx-3 pb-3 border-slate-600 sm:mt-6">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl  font-bold text-center mb-5 bg-slate-950 rounded-xl pb-2">
+          <h2 className="text-2xl sm:text-3xl  font-bold text-center mb-5 bg-slate-950 rounded-xl pb-2 hover:scale-95 ease-in-out duration-300">
               Category
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
@@ -190,7 +190,7 @@ function ShoppingHome() {
         </div>
       </section>
 
-      <section className="pt-3 text-slate-300 bg-gradient-to-r from-black to-slate-900 border mt-3 rounded-2xl mx-3 pb-3 border-slate-600">
+      <section className="pt-3 text-slate-300 bg-gradient-to-r from-black to-slate-900 border mt-3 rounded-2xl mx-3 pb-3 border-slate-600 hover:scale-95 ease-in-out duration-300">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold text-center mb-5 bg-slate-950 rounded-xl pb-2">
             Choose your Brand
@@ -212,7 +212,7 @@ function ShoppingHome() {
 
       <section className="pt-16 bg-gradient-to-r from-black to-slate-900">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 hover:scale-105 ease-in-out duration-300 text-slate-300 bg-slate-950 rounded-xl pb-2">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 hover:scale-95 ease-in-out duration-300 text-slate-300 bg-slate-950 rounded-xl pb-2">
             Product Listing
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
