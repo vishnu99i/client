@@ -127,7 +127,7 @@ function Address({ setCurrentSelectedAddress, selectedId }) {
           : null}
       </div>
       <CardHeader>
-        <CardTitle className="text-slate-300 animate-pulse">
+        <CardTitle className="text-slate-300 animate-pulse text-xl sm:text-2xl">
           {currentEditedId !== null ? "Edit Address" : "Add New Address"}
         </CardTitle>
       </CardHeader>

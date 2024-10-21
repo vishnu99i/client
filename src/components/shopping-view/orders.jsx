@@ -40,18 +40,19 @@ function ShoppingOrders() {
   console.log(orderDetails, "orderDetails");
 
   return (
-    <Card>
+    <Card className="bg-gradient-to-r from-black to-slate-900">
       <CardHeader>
-        <CardTitle>Order History</CardTitle>
+        <CardTitle className="text-slate-300">Order History</CardTitle>
+        <CardTitle className="text-orange-700 text-sm sm:hidden animate-pulse">Scroll from left to right for details</CardTitle>
       </CardHeader>
       <CardContent>
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead>Order ID</TableHead>
-              <TableHead>Order Date</TableHead>
-              <TableHead>Order Status</TableHead>
-              <TableHead>Order Price</TableHead>
+              <TableHead className="text-slate-200">Order ID</TableHead>
+              <TableHead className="text-slate-200">Order Date</TableHead>
+              <TableHead className="text-slate-200 text-center">Order Status</TableHead>
+              <TableHead className="text-slate-200">Order Price</TableHead>
               <TableHead>
                 <span className="sr-only">Details</span>
               </TableHead>
@@ -61,11 +62,11 @@ function ShoppingOrders() {
             {orderList && orderList.length > 0
               ? orderList.map((orderItem) => (
                   <TableRow>
-                    <TableCell>{orderItem?._id}</TableCell>
-                    <TableCell>{orderItem?.orderDate.split("T")[0]}</TableCell>
+                    <TableCell className="text-blue-700 text-xs sm:text-md">{orderItem?._id}</TableCell>
+                    <TableCell className="text-slate-300">{orderItem?.orderDate.split("T")[0]}</TableCell>
                     <TableCell>
                       <Badge
-                        className={`py-1 px-3 ${
+                        className={`py-2 px-3 border border-slate-500 ${
                           orderItem?.orderStatus === "confirmed"
                             ? "bg-green-500"
                             : orderItem?.orderStatus === "rejected"
@@ -76,7 +77,7 @@ function ShoppingOrders() {
                         {orderItem?.orderStatus}
                       </Badge>
                     </TableCell>
-                    <TableCell>${orderItem?.totalAmount}</TableCell>
+                    <TableCell className="text-green-600 text-lg">₹{orderItem?.totalAmount}</TableCell>
                     <TableCell>
                       <Dialog
                         open={openDetailsDialog}
@@ -89,6 +90,7 @@ function ShoppingOrders() {
                           onClick={() =>
                             handleFetchOrderDetails(orderItem?._id)
                           }
+                          className="border border-slate-500"
                         >
                           View Details
                         </Button>
