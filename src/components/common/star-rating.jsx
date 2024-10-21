@@ -6,7 +6,7 @@ function StarRatingComponent({ rating, handleRatingChange }) {
 
   return [1, 2, 3, 4, 5].map((star) => (
     <Button
-      className={`rounded sm:rounded-full transition-colors bg-slate-500 w-7 sm:w-10 ${
+      className={`rounded sm:rounded-full transition-colors bg-slate-500 w-6 h-6 sm:w-10 sm:h-10 ${
         star <= rating
           ? "text-yellow-500 hover:bg-black"
           : "text-black hover:bg-slate-500 hover:text-slate-100"
@@ -16,7 +16,7 @@ function StarRatingComponent({ rating, handleRatingChange }) {
       onClick={handleRatingChange ? () => handleRatingChange(star) : null}
     >
       <StarIcon
-        className={`w-6 h-6 ${
+        className={`w-5 sm:w-6 h-5 sm:h-6 ${
           star <= rating ? "fill-yellow-500" : "fill-slate-700"
         }`}
       />
