@@ -106,7 +106,7 @@ function ProductDetailsDialog({ open, setOpen, productDetails }) {
 
   return (
     <Dialog open={open} onOpenChange={handleDialogClose}>
-      <DialogContent className="grid grid-cols-3 gap-2 sm:gap-5 sm:p-12 max-w-[90vw] sm:max-w-[80vw] lg:max-w-[70vw] font-mono bg-gradient-to-r from-black to-slate-700 h-[95vh] overflow-y-scroll mt-8 sm:mt-6">
+      <DialogContent className="grid grid-cols-3 gap-2 sm:gap-5 sm:p-12 max-w-[90vw] sm:max-w-[80vw] lg:max-w-[70vw] font-mono bg-gradient-to-r from-black to-slate-700 h-[95vh] overflow-y-scroll mt-8 sm:mt-6 pl-2 sm:pl-5 pr-2 sm:pr-5">
         <div className="relative rounded-lg my-auto">
           <img
             src={productDetails?.image}
