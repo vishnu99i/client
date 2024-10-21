@@ -164,7 +164,7 @@ function ProductDetailsDialog({ open, setOpen, productDetails }) {
           </div>
           </div>
 
-          <Separator className="col-span-3"/>
+          {/* <Separator className="col-span-3"/> */}
 
           <div className="col-span-3">
           <div className="max-h-[300px] overflow-auto">
