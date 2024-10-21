@@ -85,7 +85,7 @@ function SearchProducts() {
   console.log(searchResults, "searchResults");
 
   return (
-    <div className="container mx-auto md:px-6 px-4 py-8">
+    <div className="container mx-auto md:px-6 px-4 py-8 bg-gradient-to-r from-black to-slate-900">
       <div className="flex justify-center mb-8">
         <div className="w-full flex items-center">
           <Input
@@ -98,9 +98,9 @@ function SearchProducts() {
         </div>
       </div>
       {!searchResults.length ? (
-        <h1 className="text-5xl font-extrabold">No result found!</h1>
+        <h1 className="text-5xl font-extrabold text-slate-300 text-center h-[65vh]">No result found!</h1>
       ) : null}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5 bg-gradient-to-r from-black to-slate-900">
         {searchResults.map((item) => (
           <ShoppingProductTile
             handleAddtoCart={handleAddtoCart}
