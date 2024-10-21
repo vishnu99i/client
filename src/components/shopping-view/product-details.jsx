@@ -106,31 +106,31 @@ function ProductDetailsDialog({ open, setOpen, productDetails }) {
 
   return (
     <Dialog open={open} onOpenChange={handleDialogClose}>
-      <DialogContent className="grid grid-cols-2 gap-8 sm:p-12 max-w-[90vw] sm:max-w-[80vw] lg:max-w-[70vw] font-mono bg-gradient-to-r from-black to-slate-700 h-[95vh] overflow-y-scroll">
+      <DialogContent className="grid grid-cols-3 gap-8 sm:p-12 max-w-[90vw] sm:max-w-[80vw] lg:max-w-[70vw] font-mono bg-gradient-to-r from-black to-slate-700 h-[95vh] overflow-y-scroll">
         <div className="relative rounded-lg my-auto">
           <img
             src={productDetails?.image}
             alt={productDetails?.title}
-            className="aspect-square w-full object-contain h-[30vh]"
+            className="aspect-square w-full object-containh-[30vh]"
           />
         </div>
-        <div>
+        <div className="col-span-2">
           <div>
-            <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-300">{productDetails?.title}</h1>
-            <p className="text-muted-foreground text-xl sm:text-2xl mb-3 mt-2">
+            <h1 className="text-xl sm:text-3xl font-extrabold text-slate-300">{productDetails?.title}</h1>
+            <p className="text-muted-foreground text-lg sm:text-2xl mb-3 mt-2">
               {productDetails?.description}
             </p>
           </div>
           <div className="flex items-center justify-between">
             <p
-              className={`text-3xl font-bold text-red-800 ${
+              className={`text-2xl sm:text-3xl font-bold text-red-800 ${
                 productDetails?.salePrice > 0 ? "line-through" : ""
               }`}
             >
               ₹{productDetails?.price}
             </p>
             {productDetails?.salePrice > 0 ? (
-              <p className="text-3xl font-bold text-green-700">
+              <p className="text-2xl sm:text-3xl font-bold text-green-700">
                 ₹{productDetails?.salePrice}
               </p>
             ) : null}
@@ -164,9 +164,9 @@ function ProductDetailsDialog({ open, setOpen, productDetails }) {
           </div>
           </div>
 
-          <Separator className="col-span-2"/>
+          <Separator className="col-span-3"/>
 
-          <div className="col-span-2">
+          <div className="col-span-3">
           <div className="max-h-[300px] overflow-auto">
             <h2 className="text-xl font-bold text-blue-700">Reviews</h2>
             <div className="grid gap-6">
@@ -192,7 +192,7 @@ function ProductDetailsDialog({ open, setOpen, productDetails }) {
                   </div>
                 ))
               ) : (
-                <h1 className="text-slate-300">No Reviews</h1>
+                <h1 className="text-slate-300 mb-5">No Reviews</h1>
               )}
             </div>
             <div className="mt-1 flex-col flex gap-2 text-slate-300">
