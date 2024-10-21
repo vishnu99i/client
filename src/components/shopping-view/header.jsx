@@ -211,7 +211,7 @@ function ShoppingHeader() {
 
             {/*  */}
             {/* <MenuItems/> */}
-            <nav className="flex flex-col mb-3 lg:mb-0 lg:items-center gap-6 lg:flex-row">
+            <nav className="flex flex-col mb-3 lg:mb-0 lg:items-center gap-5 sm:gap-6 lg:flex-row">
         {shoppingViewHeaderMenuItems.map((menuItem) => (
   
   
@@ -232,7 +232,7 @@ function ShoppingHeader() {
 
 {/*  */}
             {/* <HeaderRightContent /> */}
-            <div className="flex lg:items-center lg:flex-row flex-col gap-4">
+            <div className="flex lg:items-center lg:flex-row flex-col gap-5 mt-7">
       <Sheet open={openCartSheet} onOpenChange={() => {
         setOpenCartSheet(false)
         setOpen(false)}}>
