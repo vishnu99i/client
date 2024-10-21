@@ -79,7 +79,7 @@ function UserCartItemsContent({ cartItem }) {
         className="w-20 h-20 rounded object-cover hover:scale-95 ease-in-out duration-300"
       />
       <div className="flex-1">
-        <h3 className="font-extrabold hover:scale-105 ease-in-out duration-300">{cartItem?.title}</h3>
+        <h3 className="font-extrabold text-slate-300 hover:scale-105 ease-in-out duration-300">{cartItem?.title}</h3>
         <div className="flex items-center gap-2 mt-1">
           <Button
             variant="outline"
@@ -91,7 +91,7 @@ function UserCartItemsContent({ cartItem }) {
             <Minus className="w-4 h-4 text-slate-100" />
             <span className="sr-only">Decrease</span>
           </Button>
-          <span className="font-semibold hover:scale-105 ease-in-out duration-300">{cartItem?.quantity}</span>
+          <span className="font-semibold text-slate-300 hover:scale-105 ease-in-out duration-300">{cartItem?.quantity}</span>
           <Button
             variant="outline"
             className="h-8 w-8 rounded-full hover:scale-105 ease-in-out duration-300 bg-red-700 hover:bg-red-600 border-none"
