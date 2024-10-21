@@ -8,12 +8,12 @@ function ShoppingOrderDetailsView({ orderDetails }) {
   const { user } = useSelector((state) => state.auth);
 
   return (
-    <DialogContent className="sm:max-w-[600px] bg-gradient-to-r from-black to-slate-900 h-[95vh] font-mono rounded-lg sm:3xl">
+    <DialogContent className="w-[90vw] sm:max-w-[600px] bg-gradient-to-r from-black to-slate-900 h-[95vh] font-mono rounded-lg sm:3xl">
       <div className="grid gap-3">
         <div className="grid gap-1 sm:gap-2">
-          <div className="flex sm:mt-3 items-center justify-between bg-slate-900 rounded-lg pl-3">
+          <div className="flex mt-3 items-center justify-between bg-slate-900 rounded-lg pl-3">
             <p className="font-medium text-slate-300">Order ID</p>
-            <Label className="text-blue-600">{orderDetails?._id}</Label>
+            <Label className="text-blue-600 text-[12px] sm:text-md">{orderDetails?._id}</Label>
           </div>
           <div className="flex mt-2 items-center justify-between bg-slate-900 rounded-lg pl-3">
             <p className="font-medium text-slate-300">Order Date</p>
