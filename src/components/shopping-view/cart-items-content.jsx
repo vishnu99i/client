@@ -76,36 +76,36 @@ function UserCartItemsContent({ cartItem }) {
       <img
         src={cartItem?.image}
         alt={cartItem?.title}
-        className="w-20 h-20 rounded object-cover"
+        className="w-20 h-20 rounded object-cover hover:scale-95 ease-in-out duration-300"
       />
       <div className="flex-1">
-        <h3 className="font-extrabold">{cartItem?.title}</h3>
+        <h3 className="font-extrabold hover:scale-105 ease-in-out duration-300">{cartItem?.title}</h3>
         <div className="flex items-center gap-2 mt-1">
           <Button
             variant="outline"
-            className="h-8 w-8 rounded-full"
+            className="h-8 w-8 rounded-full hover:scale-105 ease-in-out duration-300 bg-green-700 hover:bg-green-600 border-none"
             size="icon"
             disabled={cartItem?.quantity === 1}
             onClick={() => handleUpdateQuantity(cartItem, "minus")}
           >
-            <Minus className="w-4 h-4" />
+            <Minus className="w-4 h-4 text-slate-100" />
             <span className="sr-only">Decrease</span>
           </Button>
-          <span className="font-semibold">{cartItem?.quantity}</span>
+          <span className="font-semibold hover:scale-105 ease-in-out duration-300">{cartItem?.quantity}</span>
           <Button
             variant="outline"
-            className="h-8 w-8 rounded-full"
+            className="h-8 w-8 rounded-full hover:scale-105 ease-in-out duration-300 bg-red-700 hover:bg-red-600 border-none"
             size="icon"
             onClick={() => handleUpdateQuantity(cartItem, "plus")}
           >
-            <Plus className="w-4 h-4" />
+            <Plus className="w-4 h-4 text-slate-100" />
             <span className="sr-only">Decrease</span>
           </Button>
         </div>
       </div>
       <div className="flex flex-col items-end">
-        <p className="font-semibold">
-          $
+        <p className="font-semibold hover:scale-105 ease-in-out duration-300 text-blue-600">
+        ₹
           {(
             (cartItem?.salePrice > 0 ? cartItem?.salePrice : cartItem?.price) *
             cartItem?.quantity
@@ -113,7 +113,7 @@ function UserCartItemsContent({ cartItem }) {
         </p>
         <Trash
           onClick={() => handleCartItemDelete(cartItem)}
-          className="cursor-pointer mt-1"
+          className="cursor-pointer mt-1 hover:scale-105 ease-in-out duration-300 text-red-700"
           size={20}
         />
       </div>

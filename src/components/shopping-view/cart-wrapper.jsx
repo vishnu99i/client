@@ -20,9 +20,9 @@ function UserCartWrapper({ cartItems, setOpenCartSheet }) {
       : 0;
 
   return (
-    <SheetContent className="sm:max-w-md">
+    <SheetContent className="w-auto sm:max-w-md bg-gradient-to-r from-black to-slate-900 text-slate-300 font-mono border-none">
       <SheetHeader>
-        <SheetTitle>Your Cart</SheetTitle>
+        <SheetTitle className="text-slate-300 hover:scale-105 ease-in-out duration-300">Your Cart</SheetTitle>
       </SheetHeader>
       <div className="mt-8 space-y-4">
         {cartItems && cartItems.length > 0
@@ -31,8 +31,8 @@ function UserCartWrapper({ cartItems, setOpenCartSheet }) {
       </div>
       <div className="mt-8 space-y-4">
         <div className="flex justify-between">
-          <span className="font-bold">Total</span>
-          <span className="font-bold">${totalCartAmount}</span>
+          <span className="font-bold hover:scale-105 ease-in-out duration-300">Total</span>
+          <span className="font-bold hover:scale-105 ease-in-out duration-300">₹{totalCartAmount}</span>
         </div>
       </div>
       <Button
@@ -40,7 +40,7 @@ function UserCartWrapper({ cartItems, setOpenCartSheet }) {
           navigate("/shop/checkout");
           setOpenCartSheet(false);
         }}
-        className="w-full mt-6"
+        className="w-full mt-6 hover:scale-95 ease-in-out duration-300 border border-slate-500"
       >
         Checkout
       </Button>
