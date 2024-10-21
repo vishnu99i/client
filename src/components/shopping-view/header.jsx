@@ -252,6 +252,7 @@ function ShoppingHeader() {
         </Button>
         <UserCartWrapper
           setOpenCartSheet={setOpenCartSheet}
+          setOpen={setOpen}
           cartItems={
             cartItems && cartItems.items && cartItems.items.length > 0
               ? cartItems.items

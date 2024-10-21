@@ -3,7 +3,7 @@ import { Button } from "../ui/button";
 import { SheetContent, SheetHeader, SheetTitle } from "../ui/sheet";
 import UserCartItemsContent from "./cart-items-content";
 
-function UserCartWrapper({ cartItems, setOpenCartSheet }) {
+function UserCartWrapper({ cartItems, setOpenCartSheet, setOpen }) {
   const navigate = useNavigate();
 
   const totalCartAmount =
@@ -39,6 +39,7 @@ function UserCartWrapper({ cartItems, setOpenCartSheet }) {
         onClick={() => {
           navigate("/shop/checkout");
           setOpenCartSheet(false);
+          setOpen(false);
         }}
         className="w-full mt-6 hover:scale-95 ease-in-out duration-300 border border-slate-500"
       >
