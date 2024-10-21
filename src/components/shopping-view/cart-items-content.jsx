@@ -54,6 +54,8 @@ function UserCartItemsContent({ cartItem }) {
       if (data?.payload?.success) {
         toast({
           title: "Cart item is updated successfully",
+          className:"text-slate-300 bg-slate-950",
+          duration: "1500"
         });
       }
     });

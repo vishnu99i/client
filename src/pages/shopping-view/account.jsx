@@ -9,7 +9,7 @@ function ShoppingAccount() {
       <div className="relative h-[300px] w-full overflow-hidden">
         <img
           src={accImg}
-          className="h-full w-full object-cover object-center"
+          className="h-full w-full object-cover"
         />
       </div>
       <div className="container mx-auto grid grid-cols-1 gap-8 py-3 px-2 sm:py-8 sm:px-5">
