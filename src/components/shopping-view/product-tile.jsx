@@ -65,7 +65,7 @@ function ShoppingProductTile({
         ) : (
           <Button
             onClick={() => handleAddtoCart(product?._id, product?.totalStock)}
-            className="w-full border hover:scale-105 ease-in-out duration-300 hover:bg-slate-950"
+            className="w-full border hover:scale-105 ease-in-out duration-300 hover:bg-slate-950 px-5"
           >
             Add to cart
           </Button>

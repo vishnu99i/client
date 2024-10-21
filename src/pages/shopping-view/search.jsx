@@ -98,7 +98,7 @@ function SearchProducts() {
         </div>
       </div>
       {!searchResults.length ? (
-        <h1 className="text-5xl font-extrabold text-slate-300 text-center h-[65vh]">No result found!</h1>
+        <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-300 text-center h-[65vh]">No result found!</h1>
       ) : null}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5 bg-gradient-to-r from-black to-slate-900">
         {searchResults.map((item) => (
