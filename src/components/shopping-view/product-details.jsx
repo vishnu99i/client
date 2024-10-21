@@ -166,7 +166,7 @@ function ProductDetailsDialog({ open, setOpen, productDetails }) {
 
           <Separator className="col-span-3"/>
 
-          <div className="col-span-3">
+          <div className="col-span-3 mt-2">
           <div className="max-h-[300px] overflow-auto">
             <h2 className="text-xl font-bold text-blue-700">Reviews</h2>
             <div className="grid gap-6">
