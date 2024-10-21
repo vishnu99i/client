@@ -42,16 +42,16 @@ function ShoppingOrders() {
   return (
     <Card className="bg-gradient-to-r from-black to-slate-900">
       <CardHeader>
-        <CardTitle className="text-slate-300">Order History</CardTitle>
-        <CardTitle className="text-orange-700 text-sm sm:hidden animate-pulse">Scroll from left to right for details</CardTitle>
+        <CardTitle className="text-slate-300 animate-pulse">Order History</CardTitle>
+        <CardTitle className="text-orange-700 text-sm sm:hidden animate-pulse">Scroll from left to right for more details</CardTitle>
       </CardHeader>
       <CardContent>
         <Table>
           <TableHeader>
-            <TableRow>
+            <TableRow className="hover:bg-slate-800 text-sm sm:text-lg">
               <TableHead className="text-slate-200">Order ID</TableHead>
               <TableHead className="text-slate-200">Order Date</TableHead>
-              <TableHead className="text-slate-200 text-center">Order Status</TableHead>
+              <TableHead className="text-slate-200 text-center sm:text-start">Order Status</TableHead>
               <TableHead className="text-slate-200">Order Price</TableHead>
               <TableHead>
                 <span className="sr-only">Details</span>
@@ -61,12 +61,12 @@ function ShoppingOrders() {
           <TableBody>
             {orderList && orderList.length > 0
               ? orderList.map((orderItem) => (
-                  <TableRow>
-                    <TableCell className="text-blue-700 text-xs sm:text-md">{orderItem?._id}</TableCell>
+                  <TableRow className="hover:bg-slate-900">
+                    <TableCell className="text-blue-700 text-xs sm:text-base">{orderItem?._id}</TableCell>
                     <TableCell className="text-slate-300">{orderItem?.orderDate.split("T")[0]}</TableCell>
                     <TableCell>
                       <Badge
-                        className={`py-2 px-3 border border-slate-500 ${
+                        className={`py-2 px-3 border border-slate-500 hover:scale-95 ease-in-out duration-300 ${
                           orderItem?.orderStatus === "confirmed"
                             ? "bg-green-500"
                             : orderItem?.orderStatus === "rejected"
@@ -90,7 +90,7 @@ function ShoppingOrders() {
                           onClick={() =>
                             handleFetchOrderDetails(orderItem?._id)
                           }
-                          className="border border-slate-500"
+                          className="border border-slate-500 hover:scale-95 ease-in-out duration-300"
                         >
                           View Details
                         </Button>
