@@ -20,7 +20,7 @@ function UserCartWrapper({ cartItems, setOpenCartSheet, setOpen }) {
       : 0;
 
   return (
-    <SheetContent className="w-auto sm:max-w-md bg-gradient-to-r from-black to-slate-900 text-slate-300 font-mono border-none">
+    <SheetContent className="w-auto sm:max-w-md bg-gradient-to-r from-black to-slate-900 text-slate-300 font-mono border-none overflow-y-scroll">
       <SheetHeader>
         <SheetTitle className="text-slate-300 hover:scale-105 ease-in-out duration-300">Your Cart</SheetTitle>
       </SheetHeader>
