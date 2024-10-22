@@ -43,26 +43,26 @@ function AdminOrderDetailsView({ orderDetails }) {
   }
 
   return (
-    <DialogContent className="sm:max-w-[600px] max-h-[90vh] overflow-y-scroll bg-gradient-to-r from-black via-slate-900 to-slate-700">
+    <DialogContent className="sm:max-w-[600px] max-h-[90vh] overflow-y-scroll bg-gradient-to-r from-black to-slate-900">
       <div className="grid gap-6">
-        <div className="grid gap-2">
-          <div className="flex mt-6 items-center justify-between">
+        <div className="grid gap-1 sm:gap-2">
+          <div className="flex mt-6 items-center justify-between bg-slate-900 pl-1 rounded-lg">
             <p className="font-medium text-slate-300">Order ID</p>
-            <Label className="text-slate-300">{orderDetails?._id}</Label>
+            <Label className="text-blue-600">{orderDetails?._id}</Label>
           </div>
-          <div className="flex mt-2 items-center justify-between">
+          <div className="flex mt-2 items-center justify-between bg-slate-900 pl-1 rounded-lg">
             <p className="font-medium text-slate-300">Order Date</p>
             <Label className="text-slate-300">{orderDetails?.orderDate.split("T")[0]}</Label>
           </div>
-          <div className="flex mt-2 items-center justify-between">
+          <div className="flex mt-2 items-center justify-between bg-slate-900 pl-1 rounded-lg">
             <p className="font-medium text-slate-300">Order Price</p>
-            <Label className="text-slate-300">₹{orderDetails?.totalAmount}</Label>
+            <Label className="text-green-500">₹{orderDetails?.totalAmount}</Label>
           </div>
-          <div className="flex mt-2 items-center justify-between">
+          <div className="flex mt-2 items-center justify-between bg-slate-900 pl-1 rounded-lg">
             <p className="font-medium text-slate-300">Payment method</p>
-            <Label className="text-slate-300">{orderDetails?.paymentMethod}</Label>
+            <Label className="text-orange-500">{orderDetails?.paymentMethod}</Label>
           </div>
-          <div className="flex mt-2 items-center justify-between">
+          <div className="flex mt-2 items-center justify-between bg-slate-900 pl-1 rounded-lg">
             <p className="font-medium text-slate-300">Payment Status</p>
             <Label className="text-slate-300">{orderDetails?.paymentStatus}</Label>
           </div>
@@ -70,7 +70,7 @@ function AdminOrderDetailsView({ orderDetails }) {
             <p className="font-medium text-slate-300">Order Status</p>
             <Label>
               <Badge
-                className={`py-1 px-3 ${
+                className={`py-1 px-3 pb-2 ${
                   orderDetails?.orderStatus === "confirmed"
                     ? "bg-green-500"
                     : orderDetails?.orderStatus === "rejected"
@@ -87,13 +87,13 @@ function AdminOrderDetailsView({ orderDetails }) {
         <div className="grid gap-4">
           <div className="grid gap-2">
             <div className="font-medium text-slate-300">Order Details</div>
-            <ul className="grid gap-3">
+            <ul className="grid gap-3 bg-slate-900 pl-1 rounded-lg">
               {orderDetails?.cartItems && orderDetails?.cartItems.length > 0
                 ? orderDetails?.cartItems.map((item) => (
-                    <li className="flex items-center justify-between text-slate-300">
+                    <li className="flex flex-col sm:flex-row items-center justify-between text-slate-300">
                       <span>Title: {item.title}</span>
-                      <span>Quantity: {item.quantity}</span>
-                      <span>Price: ₹{item.price}</span>
+                      <span className="text-orange-500">Quantity: {item.quantity}</span>
+                      <span className="text-green-600">Price: ₹{item.price}</span>
                     </li>
                   ))
                 : null}
@@ -103,7 +103,7 @@ function AdminOrderDetailsView({ orderDetails }) {
         <div className="grid gap-4">
           <div className="grid gap-2">
             <div className="font-medium text-slate-300">Shipping Info</div>
-            <div className="grid gap-0.5 text-muted-foreground">
+            <div className="grid gap-0.5 text-slate-300 bg-slate-900 pl-2 rounded-lg py-3">
               <span>{user.userName}</span>
               <span>{orderDetails?.addressInfo?.address}</span>
               <span>{orderDetails?.addressInfo?.city}</span>
