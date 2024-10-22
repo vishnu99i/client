@@ -47,7 +47,7 @@ function AdminOrdersView() {
       <CardContent>
         <Table className="overflow-x-scroll">
           <TableHeader>
-            <TableRow>
+            <TableRow className="hover:bg-slate-700">
               <TableHead className="hover:scale-105 ease-in-out duration-300 text-slate-300 font-bold">Order ID</TableHead>
               <TableHead className="hover:scale-105 ease-in-out duration-300 text-slate-300 font-bold">Order Date</TableHead>
               <TableHead className="hover:scale-105 ease-in-out duration-300 text-slate-300 font-bold">Order Price</TableHead>
@@ -61,10 +61,10 @@ function AdminOrdersView() {
           <TableBody className="text-slate-300">
             {orderList && orderList.length > 0
               ? orderList.map((orderItem) => (
-                  <TableRow>
+                  <TableRow className="hover:bg-slate-800">
                     <TableCell className="text-blue-500">{orderItem?._id}</TableCell>
                     <TableCell>{orderItem?.orderDate.split("T")[0]}</TableCell>
-                    <TableCell>₹{orderItem?.totalAmount}</TableCell>
+                    <TableCell className="text-green-600">₹{orderItem?.totalAmount}</TableCell>
 
                     <TableCell>
                       <Badge
