@@ -45,12 +45,12 @@ function ShoppingProductTile({
             <span
               className={`${
                 product?.salePrice > 0 ? "line-through" : ""
-              } text-xl font-semibold text-primary text-red-700 hover:scale-105 ease-in-out duration-300`}
+              } text-base sm:text-2xl font-semibold text-red-600 hover:scale-105 ease-in-out duration-300`}
             >
               ₹{product?.price}
             </span>
             {product?.salePrice > 0 ? (
-              <span className="text-xl font-semibold text-primary text-green-700 hover:scale-105 ease-in-out duration-300">
+              <span className="text-base sm:text-2xl font-semibold text-green-600 hover:scale-105 ease-in-out duration-300">
                 ₹{product?.salePrice}
               </span>
             ) : null}

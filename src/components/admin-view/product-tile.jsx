@@ -24,12 +24,12 @@ function AdminProductTile({
             <span
               className={`${
                 product?.salePrice > 0 ? "line-through" : ""
-              } text-lg sm:text-xl font-bold text-red-600`}
+              } text-base sm:text-2xl font-bold text-red-600`}
             >
             ₹{product?.price}
             </span>
             {product?.salePrice > 0 ? (
-              <span className="text-lg sm:text-xl font-bold text-green-600">₹{product?.salePrice}</span>
+              <span className="text-base sm:text-2xl font-bold text-green-600">₹{product?.salePrice}</span>
             ) : null}
           </div>
         </CardContent>
