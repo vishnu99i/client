@@ -133,7 +133,7 @@ function AdminProducts() {
           setFormData(initialFormData);
         }}
       >
-        <SheetContent side="right" className="overflow-auto bg-gradient-to-r from-black to-slate-700 border-transparent">
+        <SheetContent side="right" className="overflow-auto bg-gradient-to-r from-black to-slate-900 border-transparent">
           <SheetHeader>
             <SheetTitle className="text-slate-300 animate-pulse hover:scale-105 ease-in-out">
               {currentEditedId !== null ? "Edit Product" : "Add New Product"}
