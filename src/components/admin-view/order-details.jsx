@@ -37,6 +37,8 @@ function AdminOrderDetailsView({ orderDetails }) {
         setFormData(initialFormData);
         toast({
           title: data?.payload?.message,
+          className:"text-slate-300 bg-slate-950",
+          duration: "1500"
         });
       }
     });

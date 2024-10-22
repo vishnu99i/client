@@ -76,6 +76,8 @@ function AdminProducts() {
             setFormData(initialFormData);
             toast({
               title: "Product add successfully",
+              className:"text-slate-300 bg-slate-950",
+              duration: "1500"
             });
           }
         });

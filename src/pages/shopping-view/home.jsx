@@ -92,6 +92,8 @@ function ShoppingHome() {
         dispatch(fetchCartItems(user?.id));
         toast({
           title: "Product is added to cart",
+          className:"text-slate-300 bg-slate-950",
+          duration: "1500"
         });
       }
     });

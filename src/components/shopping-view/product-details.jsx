@@ -42,6 +42,7 @@ function ProductDetailsDialog({ open, setOpen, productDetails }) {
           toast({
             title: `Only ${getQuantity} quantity can be added for this item`,
             variant: "destructive",
+            duration:"1500"
           });
 
           return;
@@ -59,6 +60,8 @@ function ProductDetailsDialog({ open, setOpen, productDetails }) {
         dispatch(fetchCartItems(user?.id));
         toast({
           title: "Product is added to cart",
+          className:"text-slate-300 bg-slate-950",
+          duration: "1500"
         });
       }
     });
@@ -87,6 +90,8 @@ function ProductDetailsDialog({ open, setOpen, productDetails }) {
         dispatch(getReviews(productDetails?._id));
         toast({
           title: "Review added successfully!",
+          className:"text-slate-300 bg-slate-950",
+          duration: "1500"
         });
       }
     });

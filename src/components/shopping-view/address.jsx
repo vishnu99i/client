@@ -36,6 +36,7 @@ function Address({ setCurrentSelectedAddress, selectedId }) {
       toast({
         title: "You can add max 3 addresses",
         variant: "destructive",
+        duration:"1500"
       });
 
       return;
@@ -55,6 +56,8 @@ function Address({ setCurrentSelectedAddress, selectedId }) {
             setFormData(initialAddressFormData);
             toast({
               title: "Address updated successfully",
+              className:"text-slate-300 bg-slate-950",
+              duration: "1500"
             });
           }
         })
@@ -69,6 +72,8 @@ function Address({ setCurrentSelectedAddress, selectedId }) {
             setFormData(initialAddressFormData);
             toast({
               title: "Address added successfully",
+              className:"text-slate-300 bg-slate-950",
+              duration: "1500"
             });
           }
         });
@@ -82,6 +87,8 @@ function Address({ setCurrentSelectedAddress, selectedId }) {
         dispatch(fetchAllAddresses(user?.id));
         toast({
           title: "Address deleted successfully",
+          className:"text-slate-300 bg-slate-950",
+          duration: "1500"
         });
       }
     });

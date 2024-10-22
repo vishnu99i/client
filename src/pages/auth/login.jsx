@@ -23,11 +23,14 @@ function AuthLogin() {
       if (data?.payload?.success) {
         toast({
           title: data?.payload?.message,
+          className:"text-slate-300 bg-slate-950",
+          duration: "1500"
         });
       } else {
         toast({
           title: data?.payload?.message,
           variant: "destructive",
+          duration:"1500"
         });
       }
     });

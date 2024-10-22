@@ -33,6 +33,7 @@ function UserCartItemsContent({ cartItem }) {
             toast({
               title: `Only ${getQuantity} quantity can be added for this item`,
               variant: "destructive",
+              duration:"1500"
             });
 
             return;
@@ -68,6 +69,8 @@ function UserCartItemsContent({ cartItem }) {
       if (data?.payload?.success) {
         toast({
           title: "Cart item is deleted successfully",
+          className:"text-slate-300 bg-slate-950",
+          duration: "1500"
         });
       }
     });

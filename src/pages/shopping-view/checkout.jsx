@@ -37,6 +37,7 @@ function ShoppingCheckout() {
       toast({
         title: "Your cart is empty. Please add items to proceed",
         variant: "destructive",
+        duration:"1500"
       });
 
       return;
@@ -45,6 +46,7 @@ function ShoppingCheckout() {
       toast({
         title: "Please select one address to proceed.",
         variant: "destructive",
+        duration:"1500"
       });
 
       return;
