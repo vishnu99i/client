@@ -43,7 +43,7 @@ function AdminOrderDetailsView({ orderDetails }) {
   }
 
   return (
-    <DialogContent className="sm:max-w-[600px] max-h-[90vh] overflow-y-scroll bg-gradient-to-r from-black to-slate-900">
+    <DialogContent className="sm:max-w-[600px] max-h-[90vh] overflow-y-scroll bg-gradient-to-r from-black to-slate-900 rounded-xl">
       <div className="grid gap-6">
         <div className="grid gap-1 sm:gap-2">
           <div className="flex mt-6 items-center justify-between bg-slate-900 pl-1 rounded-lg">
