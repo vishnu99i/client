@@ -213,6 +213,7 @@ function ProductDetailsDialog({ open, setOpen, productDetails }) {
                 value={reviewMsg}
                 onChange={(event) => setReviewMsg(event.target.value)}
                 placeholder="Write a review..."
+                className="text-slate-950"
               />
               <Button
                 onClick={handleAddReview}
