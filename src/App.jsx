@@ -33,7 +33,7 @@ function App() {
     dispatch(checkAuth());
   }, [dispatch]);
 
-  if (isLoading) return <Skeleton className="w-[800] bg-black h-[600px]" />;
+  if (isLoading) return <Skeleton className="w-[100vw] h-[100vh] bg-gradient-to-r from-black to-slate-900" />;
 
   console.log(isLoading, user);
 
