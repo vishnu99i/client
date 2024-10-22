@@ -57,7 +57,7 @@ function ShoppingProductTile({
           </div>
         </CardContent>
       </div>
-      <CardFooter className="bg-slate-800 rounded-b-lg pb-0 py-3">
+      <CardFooter className="bg-slate-800 rounded-b-lg pb-0 py-3 px-3">
         {product?.totalStock === 0 ? (
           <Button className="w-full opacity-60 cursor-not-allowed">
             Out Of Stock
