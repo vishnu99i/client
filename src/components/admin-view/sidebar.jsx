@@ -70,7 +70,7 @@ function AdminSideBar({ open, setOpen }) {
           </div>
         </SheetContent>
       </Sheet>
-      <aside className="hidden w-64 flex-col border-r p-6 lg:flex bg-slate-950 border-slate-700">
+      <aside className="hidden w-64 flex-col border-r p-6 lg:flex bg-gradient-to-r from-blackto-slate-950 border-slate-700">
         <div
           onClick={() => navigate("/admin/dashboard")}
           className="flex cursor-pointer items-center gap-2"
@@ -78,7 +78,7 @@ function AdminSideBar({ open, setOpen }) {
           <div className="fixed">
           <div className="relatiive">
           <ShieldCheck size={30} className="text-slate-300 hover:scale-105 ease-in-out duration-300 absolute top-5"/>
-          <h1 className="text-2xl font-extrabold hover:scale-105 ease-in-out duration-300 text-slate-300 absolute left-10">Admin Panel</h1>
+          <h1 className="text-2xl font-bold hover:scale-105 ease-in-out duration-300 text-slate-300 absolute left-10">Admin Panel</h1>
           </div>
           </div>
         </div>
