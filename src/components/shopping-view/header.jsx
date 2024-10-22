@@ -193,7 +193,7 @@ function ShoppingHeader() {
   //////////////////////////////////////////
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b bg-gradient-to-r from-black to-slate-900 text-slate-300">
+    <header className="fixed top-0 z-40 w-full border-b bg-gradient-to-r from-black to-slate-900 text-slate-300">
       <div className="flex h-16 items-center justify-between px-4 md:px-6">
         <Link to="/shop/home" className="flex items-center gap-2">
           <Shirt className="h-6 w-6 hover:scale-125 ease-in-out duration-300"/> {/* <HousePlug className="h-6 w-6" /> */}

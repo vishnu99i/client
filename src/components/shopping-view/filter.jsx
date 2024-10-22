@@ -7,17 +7,19 @@ import { Separator } from "../ui/separator";
 function ProductFilter({ filters, handleFilter }) {
   return (
     <div className="text-slate-300 rounded-lg shadow-sm border border-slate-500 bg-gradient-to-r from-black to-slate-900">
-      <div className="p-4 border-b-2 border-slate-300">
-        <h2 className="text-lg font-extrabold">Filters</h2>
+      
+      <div className="md:fixed">
+      <div className="p-4 border-b-2 md:w-[198px] border-slate-300">
+        <h2 className="text-lg md:text-2xl font-extrabold">Filters</h2>
       </div>
-      <div className="p-4 space-y-4">
+      <div className="p-4 space-y-3">
         {Object.keys(filterOptions).map((keyItem) => (
           <Fragment>
             <div>
-              <h3 className="text-base font-bold">{keyItem}</h3>
+              <h3 className="text-base md:text-xl font-bold">{keyItem}</h3>
               <div className="grid gap-2 mt-2">
                 {filterOptions[keyItem].map((option) => (
-                  <Label className="flex font-medium items-center gap-2 ">
+                  <Label className="flex text-[12px] md:text-sm font-medium items-center gap-2 md:gap-5 ">
                     <Checkbox
                       checked={
                         filters &&
@@ -36,6 +38,7 @@ function ProductFilter({ filters, handleFilter }) {
             <Separator />
           </Fragment>
         ))}
+      </div>
       </div>
     </div>
   );

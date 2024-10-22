@@ -126,7 +126,7 @@ function ShoppingHome() {
 
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-r from-black to-slate-900">
-      <div className="relative w-full h-[300px] md:h-[600px] overflow-hidden bg-gradient-to-r from-black to-slate-900">
+      <div className="relative w-full h-[300px] md:h-[600px] overflow-hidden bg-gradient-to-r from-black to-slate-900 mt-10">
         {featureImageList && featureImageList.length > 0
           ? featureImageList.map((slide, index) => (
               <img
