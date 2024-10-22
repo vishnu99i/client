@@ -24,7 +24,7 @@ function AdminProductTile({
             <span
               className={`${
                 product?.salePrice > 0 ? "line-through" : ""
-              } text-lg sm:text-xl font-bold text-text-red-600`}
+              } text-lg sm:text-xl font-bold text-red-600`}
             >
             ₹{product?.price}
             </span>
