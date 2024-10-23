@@ -30,9 +30,10 @@ function AuthRegister() {
         navigate("/auth/login");
       } else {
         toast({
-          title: data?.payload?.message,
+          // title: data?.payload?.message,
+          title:"Already registered username,enter a different username or check the registration form filled accurately",
           variant: "destructive",
-          duration:"1500"
+          duration:"5000"
         });
       }
     });
