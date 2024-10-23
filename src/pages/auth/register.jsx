@@ -32,7 +32,7 @@ function AuthRegister() {
         toast({
           title: data?.payload?.message,
           variant: "destructive",
-          duration:"3000"
+          duration:"7000"
         });
       }
     });
